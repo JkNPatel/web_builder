@@ -1,0 +1,103 @@
+{% load static %}
+        <header id="header" class="header-transparent "
+            data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
+            <div class="header-body border-top-0 bg-light box-shadow-none">
+                <div class="header-top header-top-borders header-top-light-2-borders">
+                    <div class="container h-100">
+                        <div class="header-row h-100">
+                            <div class="header-column justify-content-start">
+                                <div class="header-row">
+                                    <nav class="header-nav-top">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
+                                                <a class="nav-link pl-0 text-primary text-3" href="mailto:{{header.header_email}}"><i class="fa fa-envelope-o text-3" aria-hidden="true"></i> &nbsp; {{header.header_email}}</a> 
+	
+                                            </li>
+                                            <li class="nav-item nav-item-borders py-2">
+                                                <a class="nav-link ml-3 pl-0 text-primary text-3" href="tel:{{header.header_contact}}"><i class="fa fa-phone text-3" aria-hidden="true"></i>&nbsp;{{header.header_contact}}</a>
+                                            </li>
+                                           
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-column justify-content-end">
+                                <div class="header-row">
+                                    <nav class="header-nav-top">
+                                        <ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean">
+                                                <li class="social-icons-facebook"><a href="{{header.header_facebook}}"
+                                                        target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                                </li>
+                                                <li class="social-icons-twitter"><a href="{{header.header_twitter}}"
+                                                        target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                <li class="social-icons-linkedin"><a href="{{header.header_instagram}}"
+                                                        target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                </li>
+                                            </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-container header-container-height-sm container">
+                    <div class="header-row">
+                        <div class="header-column">
+                            <div class="header-row">
+                                <div class="header-logo">
+                                    <a href="index.html">
+                                    {% static 'logo' as logo_path%}
+                                        <img alt="Porto" width="100" height="48" data-sticky-width="82"
+                                            data-sticky-height="40" src="{{logo_path}}/{{website.website_logo1}}">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row">
+                                <div
+                                    class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-dark-text order-2 order-lg-1">
+                                    <div
+                                        class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
+                                        <nav class="collapse">
+                                            <ul class="nav nav-pills" id="mainNav">
+                                                {% for menu1 in menu_data%}
+                                                        {% if menu1.childs.0.id == null  %}
+                                                                {% if menu1.link_type == 'external' %}
+                                                                        <li class=""> <a class="dropdown-item dropdown-toggle"
+                                                                        href="{{menu1.link_url}}" target="_blank"> {{menu1.title}} </a></li>
+                                                                {% else %}
+                                                                        <li class=""> <a class="dropdown-item dropdown-toggle"
+                                                                        href="/{{website.website_url}}/{{menu1.link_url}}"> {{menu1.title}} </a></li>
+                                                                {% endif %}
+                                                        {% else %}
+                                                                <li class="dropdown"> <a class="dropdown-item dropdown-toggle"
+                                                                href="/{{website.website_url}}/{{menu1.link_url}}"> {{menu1.title}} </a>
+                                                                <ul class="dropdown-menu">
+                                                                {% for menu2 in menu1.childs %}
+                                                                        {% if menu2.menu2_link_type == 'external' %}
+                                                                                <li> <a class="dropdown-item" href="{{menu2.menu2_link_url}}" target="_blank"> {{menu2.menu2_title}}
+                                                                                </a> </li>     
+                                                                        {% else %}
+                                                                                <li> <a class="dropdown-item" href="/{{website.website_url}}/{{menu2.menu2_link_url}}"> {{menu2.menu2_title}}
+                                                                                </a> </li>     
+                                                                        {% endif %}         
+                                                                {% endfor %}
+                                                                </ul></li>
+                                                        {% endif %}                                                
+                                                {% endfor %}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <button class="btn header-btn-collapse-nav" data-toggle="collapse"
+                                        data-target=".header-nav-main nav">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+       

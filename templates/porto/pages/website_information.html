@@ -1,0 +1,145 @@
+{% extends "porto/pages/dashboard_leftbar.html" %}
+
+{% load static %}
+{% block content %}
+
+<section role="main" class="content-body">
+    <header class="page-header">
+        <h2>Website Information</h2>
+        <div class="right-wrapper text-right">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-home-alt"></i>
+                    </a>
+                </li>
+                <li><span>Websites</span></li>
+                <li><span>website-information</span></li>
+            </ol>
+            <a class="sidebar-right-toggle" data-open="sidebar-right"><i
+                class="fas fa-chevron-left"></i></a>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs tabs-quaternary">
+                <ul class="nav nav-tabs ">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#website-detail" data-toggle="tab"><i
+                            class="fa fa-globe mr-1" aria-hidden="true"></i>&nbsp;Website Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#language" data-toggle="tab"><i
+                            class="fa fa-language mr-1" aria-hidden="true"></i>&nbsp;Language
+                        Settings</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="website-detail" class="tab-pane active pt-2 pb-2">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 mb-3">
+
+                                <div class="container">
+                                    <form enctype="multipart/form-data" class="contact-form" action="" method="POST">
+                                        {% csrf_token %}
+                                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                                            <strong>Error!</strong> There was an error sending your message.
+                                            <span class="mail-error-message text-1 d-block"></span>
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="form-group col-lg-12">
+                                                <label class="mb-2 text-2">Website Name* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                <input type="text" value="" placeholder="ex. www.google.com" data-msg-required="Please enter your name." maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-row mb-3">
+                                            <div class="form-group col-lg-12">
+                                                <label class="mb-2 text-2">Website URL* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                    <span class="input-group-text">https://</span>
+                                                    </span>
+                                                    <input name="url" type="text" class="form-control">
+                                                    <span class="input-group-append">
+                                                    <span class="input-group-text">webbuilder.com</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                       
+
+                                        <div class="form-row mb-3">
+                                            <div class="form-group col-lg-12">
+
+                                                <label class=" text-2">Website Logo*</label>
+                                                <div class="input-field">
+
+                                                    <div class="input-images-1" style="padding-top: .2rem;"></div>
+                                                    <!-- <p class="mt-2 text-secondary">* You can upload multiple images</p> -->
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row mb-3">
+                                            <div class="form-group col-lg-12">
+
+                                                <label class=" text-2">Website Favicon* </label>
+                                                <div class="input-field">
+
+                                                    <div class="input-images-2" style="padding-top: .2rem;"></div>
+                                                    <!-- <p class="mt-2 text-secondary">* You can upload multiple images</p> -->
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="form-row mt-1">
+                                            <div class="form-group mt-2">
+                                                <input type="submit" value="Submit Form" class="btn btn-primary" data-loading-text="Loading...">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="p-3">
+                                    
+                                <h4>Watch tutorial for making website</h4>
+                                <br>
+                                <div class="embed-responsive embed-responsive-16by9 embed-responsive-borders">
+                                    <iframe frameborder="0" allowfullscreen=""
+                                        src="http://www.youtube.com/embed/l-epKcOA7RQ?showinfo=0&amp;wmode=opaque"></iframe>
+                                </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+
+
+                    </div>
+                    <div id="language" class="tab-pane pt-2 pb-2">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock content %}

@@ -1,0 +1,2588 @@
+<!doctype html>
+<html class="sidebar-light sidebar-left-big-icons" data-style-switcher-options="{'sidebarColor': 'light'}">
+{% load static %}
+<head>
+
+	<meta charset="UTF-8">
+	<title>Left Sidebar Big Icons Light | Porto Admin - Responsive HTML5 Template</title>
+	<meta name="keywords" content="HTML5 Admin Template" />
+	<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+	<meta name="author" content="okler.net">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800|Shadows+Into+Light"
+		rel="stylesheet" type="text/css">
+
+	<!-- link and script for front-->
+
+	<link rel="stylesheet" href="{% static 'porto/vendor/bootstrap/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/fontawesome-free/css/all.min.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/animate/animate.compat.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/simple-line-icons/css/simple-line-icons.min.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/owl.carousel/assets/owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/owl.carousel/assets/owl.theme.default.min.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/vendor/magnific-popup/magnific-popup.min.css'%}">
+
+	<link rel="stylesheet" href="{% static 'porto/css/theme.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/css/theme-elements.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/css/theme-blog.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/css/theme-shop.css'%}">
+	<link rel="stylesheet" href="{% static 'porto/css/demos/demo-landing.css'%}">
+	<link id="skinCSS" rel="stylesheet" href="{% static 'porto/css/skins/skin-landing.css'%}">
+
+	<link rel="stylesheet" href="{% static 'porto/css/custom.css'%}">
+
+	<script src="{% static 'porto/vendor/modernizr/modernizr.min.js'%}"></script>
+
+	<script src="{% static 'porto/js/theme.init.js'%}"></script>
+
+	<!-- end -->
+
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/bootstrap/css/bootstrap.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/animate/animate.compat.css'%}">
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/font-awesome/css/all.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/boxicons/css/boxicons.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/magnific-popup/magnific-popup.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/jquery-ui/jquery-ui.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/jquery-ui/jquery-ui.theme.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css'%}" />
+	<link rel="stylesheet" href="{% static 'porto_admin/vendor/morris/morris.css'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'porto_admin/css/theme.css'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'porto_admin/css/custom.css'%}">
+
+	<script src="{% static 'porto_admin/vendor/modernizr/modernizr.js'%}"></script>
+	<script src="{% static 'porto_admin/master/style-switcher/style.switcher.localstorage.js'%}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+    
+
+.mydivoverlap{
+    position: relative;
+    z-index: 1;
+}
+.mybuttonoverlap{
+	position: absolute;
+    z-index: 2;
+    top: 44px;
+    display: none;
+    left: 59px;	
+}
+#elementCounter:hover .mybuttonoverlap{ 
+	display:block;
+}
+    
+    
+/*overlay*/
+* {box-sizing: border-box;}
+
+.abc {
+  position: relative;
+}
+
+.xyz {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0; 
+  background: rgb(0 0 0 / 50%);
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.overlay:before{
+  background: none;    
+}
+    
+.abc:hover .overlay {
+  opacity: 1;
+}
+
+/*for tree*/
+
+.tree {
+    min-height:20px;
+    padding:19px;
+    margin-bottom:20px;
+    background-color:#fbfbfb;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:30px;
+    width:25px
+}
+.tree li span {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid #999;
+    border-radius:5px;
+    display:inline-block;
+    padding:3px 8px;
+    text-decoration:none
+}
+.tree li.parent_li>span {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0
+}
+.tree li:last-child::before {
+    height:30px
+}
+.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+    background:#eee;
+    border:1px solid #94a0b4;
+    color:#000
+}
+</style>
+</head>
+
+<body>
+	<section class="body">
+
+		<header class="header" style="z-index: 1010;">
+			<div class="logo-container">
+				<a href="https://www.okler.net/previews/porto-admin/3.1.0" class="logo"> <img src="{% static 'porto/img/logo.png'%}"
+						width="75" height="35" alt="Porto Admin" /> </a>
+				<div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+					data-fire-event="sidebar-left-opened"> <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+				</div>
+			</div>
+
+			<div class="header-right">
+				<form action="https://www.okler.net/previews/porto-admin/3.1.0/pages-search-results.html"
+					class="search nav-form">
+					<div class="input-group">
+						<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+						<span class="input-group-append">
+							<button class="btn btn-default" type="submit"><i class="bx bx-search"></i></button>
+						</span>
+					</div>
+				</form>
+				<span class="separator"></span>
+				<ul class="notifications">
+					<li>
+						<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+							<i class="bx bx-list-ol"></i>
+							<span class="badge">3</span>
+						</a>
+						<div class="dropdown-menu notification-menu large">
+							<div class="notification-title">
+								<span class="float-right badge badge-default">3</span>
+								Tasks
+							</div>
+							<div class="content">
+								<ul>
+									<li>
+										<p class="clearfix mb-1">
+											<span class="message float-left">Generating Sales Report</span>
+											<span class="message float-right text-dark">60%</span>
+										</p>
+										<div class="progress progress-xs light">
+											<div class="progress-bar" role="progressbar" aria-valuenow="60"
+												aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+										</div>
+									</li>
+									<li>
+										<p class="clearfix mb-1">
+											<span class="message float-left">Importing Contacts</span>
+											<span class="message float-right text-dark">98%</span>
+										</p>
+										<div class="progress progress-xs light">
+											<div class="progress-bar" role="progressbar" aria-valuenow="98"
+												aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
+										</div>
+									</li>
+									<li>
+										<p class="clearfix mb-1">
+											<span class="message float-left">Uploading something big</span>
+											<span class="message float-right text-dark">33%</span>
+										</p>
+										<div class="progress progress-xs light mb-1">
+											<div class="progress-bar" role="progressbar" aria-valuenow="33"
+												aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+							<i class="bx bx-envelope"></i>
+							<span class="badge">4</span>
+						</a>
+						<div class="dropdown-menu notification-menu">
+							<div class="notification-title">
+								<span class="float-right badge badge-default">230</span>
+								Messages
+							</div>
+							<div class="content">
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<figure class="image">
+												<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Doe Junior"
+													class="rounded-circle" />
+											</figure>
+											<span class="title">Joseph Doe</span>
+											<span class="message">Lorem ipsum dolor sit.</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<figure class="image">
+												<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Junior"
+													class="rounded-circle" />
+											</figure>
+											<span class="title">Joseph Junior</span>
+											<span class="message truncate">Truncated message. Lorem ipsum dolor sit
+												amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin
+												vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla
+												molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec
+												venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed
+												interdum cursus dui nec venenatis. Pellentesque non nisi lobortis,
+												rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet
+												tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus
+												tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo
+												eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id.
+												Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam
+												tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur
+												venenatis pharetra. Vestibulum egestas nisi quis elementum
+												elementum.</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<figure class="image">
+												<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joe Junior"
+													class="rounded-circle" />
+											</figure>
+											<span class="title">Joe Junior</span>
+											<span class="message">Lorem ipsum dolor sit.</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<figure class="image">
+												<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Junior"
+													class="rounded-circle" />
+											</figure>
+											<span class="title">Joseph Junior</span>
+											<span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non
+												luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac
+												tincidunt. Quisque eget convallis diam.</span>
+										</a>
+									</li>
+								</ul>
+								<hr />
+								<div class="text-right">
+									<a href="#" class="view-more">View All</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+							<i class="bx bx-bell"></i>
+							<span class="badge">3</span>
+						</a>
+						<div class="dropdown-menu notification-menu">
+							<div class="notification-title">
+								<span class="float-right badge badge-default">3</span>
+								Alerts
+							</div>
+							<div class="content">
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<div class="image">
+												<i class="fas fa-thumbs-down bg-danger text-light"></i>
+											</div>
+											<span class="title">Server is Down!</span>
+											<span class="message">Just now</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<div class="image">
+												<i class="bx bx-lock bg-warning text-light"></i>
+											</div>
+											<span class="title">User Locked</span>
+											<span class="message">15 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<div class="image">
+												<i class="fas fa-signal bg-success text-light"></i>
+											</div>
+											<span class="title">Connection Restaured</span>
+											<span class="message">10/10/2017</span>
+										</a>
+									</li>
+								</ul>
+								<hr />
+								<div class="text-right">
+									<a href="#" class="view-more">View All</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<span class="separator"></span>
+				<div id="userbox" class="userbox">
+					<a href="#" data-toggle="dropdown">
+						<figure class="profile-picture">
+							<img src="{% static 'porto/img/%21logged-user.jpg'%}" alt="Joseph Doe" class="rounded-circle"
+								data-lock-picture="{% static 'porto/img/%21logged-user.jpg'%}" />
+						</figure>
+						<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+							<span class="name">John Doe Junior</span>
+							<span class="role">Administrator</span>
+						</div>
+						<i class="fa custom-caret"></i>
+					</a>
+					<div class="dropdown-menu">
+						<ul class="list-unstyled mb-2">
+							<li class="divider"></li>
+							<li>
+								<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i
+										class="bx bx-user-circle"></i> My Profile</a>
+							</li>
+							<li>
+								<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i
+										class="bx bx-lock"></i> Lock Screen</a>
+							</li>
+							<li>
+								<a role="menuitem" tabindex="-1" href="pages-signin.html"><i
+										class="bx bx-power-off"></i> Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<div class="inner-wrapper">
+
+			<aside id="sidebar-left" class="sidebar-left">
+				<div class="sidebar-header">
+					<div class="sidebar-title">
+						Navigation
+					</div>
+					<div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed"
+						data-target="html" data-fire-event="sidebar-left-toggle">
+						<i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+				<div class="nano">
+					<div class="nano-content">
+						<nav id="menu" class="nav-main" role="navigation">
+							<ul class="nav nav-main">
+								<li>
+									<a class="nav-link" href="/dashboard">
+										<i class="bx bx-home-alt" aria-hidden="true"></i>
+										<span>Dashboard</span>
+									</a>
+								</li>
+								<li>
+									<a class="nav-link" data-toggle="modal" data-target="#addPage">
+										<i class="bx bx-file" aria-hidden="true"></i>
+										<span>+ Add Page</span>
+									</a>
+								</li>
+								<li class="nav-parent">
+									<a class="nav-link" href="#">
+										<i class="bx bx-file" aria-hidden="true"></i>
+										<span>My Pages</span>
+									</a>
+									<ul class="nav nav-children">
+									{% for page in all_pages %}
+										<li>
+											<a class="nav-link" href="/edit/{{website.website_url}}/{{page.page_url}}">
+											<i class="icon-doc icons"></i> {{page.page_url}}.html
+											</a>
+										</li>
+									{% endfor %}
+										<li>
+											<a class="nav-link"  data-toggle="modal" data-target="#addPage">
+											+ Add New
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="nav-link" target="_blank"
+										href="/{{website.website_url}}">
+										<i class="bx bx-window-alt" aria-hidden="true"></i>
+										<span>Visit Website</span>
+									</a>
+								</li>
+								<li>
+									<a class="nav-link" data-toggle="modal" data-target="#generalSettings">
+										<i class="bx bx-slider-alt" aria-hidden="true"></i>
+										<span>General Settings</span>
+									</a>
+								</li>
+								<li>
+									<a class="nav-link" data-toggle="modal" data-target="#retargetCode">
+										<i class="bx bx-code-block" aria-hidden="true"></i>
+										<span>Retargeting Code</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<hr class="separator" />
+						<div class="sidebar-widget widget-tasks">
+							<div class="widget-header">
+								<h6>Projects</h6>
+								<div class="widget-toggle">+</div>
+							</div>
+							<div class="widget-content">
+								<ul class="list-unstyled m-0">
+									<li><a href="#">Porto HTML5 Template</a></li>
+									<li><a href="#">Tucson Template</a></li>
+									<li><a href="#">Porto Admin</a></li>
+								</ul>
+							</div>
+						</div>
+						<hr class="separator" />
+						<div class="sidebar-widget widget-stats">
+							<div class="widget-header">
+								<h6>Company Stats</h6>
+								<div class="widget-toggle">+</div>
+							</div>
+							<div class="widget-content">
+								<ul>
+									<li>
+										<span class="stats-title">Stat 1</span>
+										<span class="stats-complete">85%</span>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary progress-without-number"
+												role="progressbar" aria-valuenow="85" aria-valuemin="0"
+												aria-valuemax="100" style="width: 85%;">
+												<span class="sr-only">85% Complete</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="stats-title">Stat 2</span>
+										<span class="stats-complete">70%</span>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary progress-without-number"
+												role="progressbar" aria-valuenow="70" aria-valuemin="0"
+												aria-valuemax="100" style="width: 70%;">
+												<span class="sr-only">70% Complete</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="stats-title">Stat 3</span>
+										<span class="stats-complete">2%</span>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary progress-without-number"
+												role="progressbar" aria-valuenow="2" aria-valuemin="0"
+												aria-valuemax="100" style="width: 2%;">
+												<span class="sr-only">2% Complete</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<script>
+						// Maintain Scroll Position
+						if (typeof localStorage !== 'undefined') {
+							if (localStorage.getItem('sidebar-left-position') !== null) {
+								var initialPosition = localStorage.getItem('sidebar-left-position'),
+									sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+								sidebarLeft.scrollTop = initialPosition;
+							}
+						}
+					</script>
+				</div>
+			</aside>
+			
+			<section role="main" class="content-body">
+				<header class="page-header header-transparent header-effect-shrink">
+
+					<h2>Left Sidebar Big Icons Light1</h2>
+					<h2 class="mt-1 border-0">
+						<div class="btn-group" role="group">
+							<button id="btnGroupDrop2" type="button" class="btn  btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Page</button>
+							<div class="dropdown-menu dropdown-menu-right mt-1 mb-1" aria-labelledby="btnGroupDrop2" style="">
+					
+							{% for page in all_pages %}
+								<a class="dropdown-item" href="/edit/{{website.website_url}}/{{page.page_url}}"><i class="icon-doc icons"></i>
+								&nbsp;{{page.page_url}}.html</a>
+							{% endfor %}
+								<a class="dropdown-item"  data-toggle="modal" data-target="#addPage"><i class="fa fa-plus fa-1x" aria-hidden="true"></i>
+								&nbsp;Add New Page</a>
+							</div>
+						</div>
+					</h2>
+					<div class="right-wrapper text-right">
+					
+						<ol class="breadcrumbs">
+                            <li>
+									<button id="mobileView" type="button" class="mb-1 mt-1 mr-1 btn btn-sm btn-primary"><i class="fas fa-mobile-alt fa-2x"></i></button>
+                                    <button id="tabletView" type="button" class="mb-1 mt-1 mr-1 btn btn-sm btn-primary"><i class="fas fa-tablet-alt fa-2x"></i></button>
+                                    <button id="desktopView" type="button" class="mb-1 mt-1 mr-1 btn btn-sm btn-primary"><i class="fas fa-desktop fa-2x"></i></button>
+                                    
+							</li>
+							<li>
+								<a href="index.html">
+									<i class="bx bx-home-alt"></i>
+								</a>
+							</li>
+							<li><span>Layouts</span></li>
+							<li><span>Left Sidebar Big Icons Light</span></li>
+						</ol>
+						<a class="sidebar-right-toggle" data-open="sidebar-right"><i
+								class="fas fa-chevron-left"></i></a>
+					</div>
+				</header>
+				
+				
+		
+			
+		<div class="body">
+		
+<!--	<h3>Website: {{website}}</h3>
+		<h3>Page: {{page}}</h3>
+		<h3>{{website_data.0.id}}</h3>
+		<h3>{{page_data.0.page_url}}</h3>
+		{{counter.0.counter_title}} -->
+	
+		<div role="main" class="main">
+		<!--Add Page Modal Start-->
+			<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="max-width: 1300px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row">
+						<div class="col-md-12">
+							<h4 class="modal-title" id="defaultModalLabel">Add a new Page</h4>
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-2">
+						</div>
+						<div class="col-md-5">
+							<button type="button" class="btn btn-light" data-dismiss="modal" aria-hidden="true">X</button>
+						</div>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+                        <div class="col-lg-12">
+                            <div class="tabs tabs-quaternary">
+                                <ul class="nav nav-tabs ">
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" href="#page_setting" data-toggle="tab"><i
+											class="fa fa-cog mr-1" aria-hidden="true"></i>&nbsp;Settings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#seo" data-toggle="tab"><i
+											class="fa fa-search-plus mr-1" aria-hidden="true"></i>&nbsp;SEO</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="page_setting" class="tab-pane active pt-2 pb-2">
+
+                                        <div class="row">
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+
+                                                <div class="container">
+                                                    <form class="contact-form" action="../../../add-page" method="POST">
+													{% csrf_token %}
+                                                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                            <strong>Error!</strong> There was an error sending your message.
+                                                            <span class="mail-error-message text-1 d-block"></span>
+                                                        </div>
+														<input type="hidden" name="website" value="{{website.id}}">
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Name* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. Homepage" data-msg-required="Please enter your name." maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page URL* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <div class="input-group">
+                                                                    <span class="input-group-prepend">
+																	<span class="input-group-text" >websitebuilder.com/</span>
+                                                                    </span>
+                                                                    <input name="url" type="text" class="form-control" placeholder="Enter page URL">
+                                                                    
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-2">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">URL matches page name</label>
+																		
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch1">
+																		<label class="custom-control-label" for="customSwitch1"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+
+                                                       <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-1">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">Show in navigation</label>
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch2">
+																		<label class="custom-control-label" for="customSwitch2"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+														
+														<div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-1">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">Set as HomePage</label>
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch3">
+																		<label class="custom-control-label" for="customSwitch3"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+														
+
+                                                        <div class="form-row mt-1">
+                                                            <div class="form-group mt-2">
+                                                                <input type="submit" value="Submit Changes" class="btn btn-primary mr-3 ml-1" data-loading-text="Loading...">
+																<input type="button" value="Cancel" class="btn btn-danger" data-loading-text="Loading...">
+                                                             
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+											
+											<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+												<div class="p-3">
+													
+												<h4>Want help for making website ?</h4>
+												<br>
+												<div class="embed-responsive embed-responsive-16by9 embed-responsive-borders">
+													<iframe frameborder="0" allowfullscreen=""
+														src="http://www.youtube.com/embed/l-epKcOA7RQ?showinfo=0&amp;wmode=opaque"></iframe>
+												</div>
+												</div>
+											</div>
+									
+                                        </div>
+
+
+                                    </div>
+                                    <div id="seo" class="tab-pane pt-2 pb-2">
+                                        <div class="row">
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+
+                                                <div class="container">
+                                                    <form class="contact-form" action="#" method="POST">
+
+                                                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                            <strong>Error!</strong> There was an error sending your message.
+                                                            <span class="mail-error-message text-1 d-block"></span>
+                                                        </div>
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Author* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. patel" data-msg-required="Please enter author name." maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row mb-3">
+                                                             <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Title* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. Website builder - Homepage" data-msg-required="Please enter title of page" maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+														
+														<div class="form-row mb-3">
+														
+														<div class="form-group col">
+															<label class="mb-2 text-2" >Page Description*<i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+															<textarea maxlength="500" data-msg-required="Please enter your message." rows="3" class="form-control text-3 h-auto py-2" name="message" required="" placeholder="Ex. Write a brief summary  of this specific page. Keep it around 150-160 characters. "></textarea>
+														</div>
+														</div>
+
+
+                                                      
+
+                                                        <div class="form-row mt-1">
+                                                            <div class="form-group mt-2">
+															    <input type="submit" value="Submit Changes" class="btn btn-primary mr-3 ml-1" data-loading-text="Loading...">
+																<input type="button" value="Cancel" class="btn btn-danger" data-loading-text="Loading...">
+                                                             
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+											
+											<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+												<div class="p-3">
+												<h4 class="mb-4">Preview of our website in Google</h4>
+												
+												<section class="call-to-action call-to-action-default p-auto">
+													<div class="col-lg-12">
+														<div class="call-to-action-content ">
+														<p class="card-text text-dark mb-2">www.my-website.com > a >users > answer</p>
+                                                                  
+														  <h3 class="card-title mb-2" style="color:#1a0dab">WixBlog | Web Design tips to promote your business</h3>
+                                                                     <p class="text-dark ">Promote your site with website builder and online marketing tips from our team.Right pellentesque pellentesque eget tempor tellus. F</p> 
+														</div>
+													</div>
+													
+												</section>
+												</div>
+											</div>
+									
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+					</div>
+					<!--Start Modal Footer
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary">Save Changes</button>
+						<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+						</div>
+						End Modal Footer-->
+				</div>
+			</div>
+			</div>
+			<!--Add Page Modal End-->
+				<!--General Settings Modal Start-->
+			<div class="modal fade" id="generalSettings" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="max-width: 1300px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row">
+						<div class="col-md-12">
+							<h4 class="modal-title" id="defaultModalLabel">Component Content</h4>
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-2">
+						</div>
+						<div class="col-md-5">
+							<button type="button" class="btn btn-light" data-dismiss="modal" aria-hidden="true">Cancel</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Save</button>
+						</div>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+                        <div class="col-lg-12">
+                            <div class="tabs tabs-quaternary">
+                                <ul class="nav nav-tabs ">
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" href="#page_setting" data-toggle="tab"><i
+											class="fa fa-cog mr-1" aria-hidden="true"></i>&nbsp;Settings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#seo" data-toggle="tab"><i
+											class="fa fa-search-plus mr-1" aria-hidden="true"></i>&nbsp;SEO</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="page_setting" class="tab-pane active pt-2 pb-2">
+
+                                        <div class="row">
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+
+                                                <div class="container">
+                                                    <form class="contact-form" action="../../../add-page" method="POST">
+													{% csrf_token %}
+                                                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                            <strong>Error!</strong> There was an error sending your message.
+                                                            <span class="mail-error-message text-1 d-block"></span>
+                                                        </div>
+														<input type="hidden" name="website" value="{{website.id}}">
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Name* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. Homepage" data-msg-required="Please enter your name." maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page URL* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <div class="input-group">
+                                                                    <span class="input-group-prepend">
+																	<span class="input-group-text" >websitebuilder.com/</span>
+                                                                    </span>
+                                                                    <input name="url" type="text" class="form-control" placeholder="Enter page URL">
+                                                                    
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-2">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">URL matches page name</label>
+																		
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch1">
+																		<label class="custom-control-label" for="customSwitch1"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+
+                                                       <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-1">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">Show in navigation</label>
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch2">
+																		<label class="custom-control-label" for="customSwitch2"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+														
+														<div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12 mt-1">
+																
+																<div class="row">
+																	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<label class=" text-2">Set as HomePage</label>
+																	</div>
+																	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 col-6">
+																		<div class="custom-control custom-switch mt-1">
+																		<input type="checkbox" class="custom-control-input " id="customSwitch3">
+																		<label class="custom-control-label" for="customSwitch3"></label>
+																	</div>	
+																	</div>
+																	
+																</div>
+                                                                
+																
+
+                                                            </div>
+                                                        </div>
+														
+
+                                                        <div class="form-row mt-1">
+                                                            <div class="form-group mt-2">
+                                                                <input type="submit" value="Submit Changes" class="btn btn-primary mr-3 ml-1" data-loading-text="Loading...">
+																<input type="button" value="Cancel" class="btn btn-danger" data-loading-text="Loading...">
+                                                             
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+											
+											<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+												<div class="p-3">
+													
+												<h4>Want help for making website ?</h4>
+												<br>
+												<div class="embed-responsive embed-responsive-16by9 embed-responsive-borders">
+													<iframe frameborder="0" allowfullscreen=""
+														src="http://www.youtube.com/embed/l-epKcOA7RQ?showinfo=0&amp;wmode=opaque"></iframe>
+												</div>
+												</div>
+											</div>
+									
+                                        </div>
+
+
+                                    </div>
+                                    <div id="seo" class="tab-pane pt-2 pb-2">
+                                        <div class="row">
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+
+                                                <div class="container">
+                                                    <form class="contact-form" action="#" method="POST">
+
+                                                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                            <strong>Error!</strong> There was an error sending your message.
+                                                            <span class="mail-error-message text-1 d-block"></span>
+                                                        </div>
+                                                        <div class="form-row mb-3">
+                                                            <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Author* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. patel" data-msg-required="Please enter author name." maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row mb-3">
+                                                             <div class="form-group col-lg-12">
+                                                                <label class="mb-2 text-2">Page Title* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+                                                                <input type="text" value="" placeholder="ex. Website builder - Homepage" data-msg-required="Please enter title of page" maxlength="100" class="form-control form-control-sm text-3 h-auto py-2" name="name" required="">
+                                                            </div>
+
+                                                        </div>
+														
+														<div class="form-row mb-3">
+														
+														<div class="form-group col">
+															<label class="mb-2 text-2" >Page Description*<i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+															<textarea maxlength="500" data-msg-required="Please enter your message." rows="3" class="form-control text-3 h-auto py-2" name="message" required="" placeholder="Ex. Write a brief summary  of this specific page. Keep it around 150-160 characters. "></textarea>
+														</div>
+														</div>
+
+
+                                                      
+
+                                                        <div class="form-row mt-1">
+                                                            <div class="form-group mt-2">
+															    <input type="submit" value="Submit Changes" class="btn btn-primary mr-3 ml-1" data-loading-text="Loading...">
+																<input type="button" value="Cancel" class="btn btn-danger" data-loading-text="Loading...">
+                                                             
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+											
+											<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+												<div class="p-3">
+												<h4 class="mb-4">Preview of our website in Google</h4>
+												
+												<section class="call-to-action call-to-action-default p-auto">
+													<div class="col-lg-12">
+														<div class="call-to-action-content ">
+														<p class="card-text text-dark mb-2">www.my-website.com > a >users > answer</p>
+                                                                  
+														  <h3 class="card-title mb-2" style="color:#1a0dab">WixBlog | Web Design tips to promote your business</h3>
+                                                                     <p class="text-dark ">Promote your site with website builder and online marketing tips from our team.Right pellentesque pellentesque eget tempor tellus. F</p> 
+														</div>
+													</div>
+													
+												</section>
+												</div>
+											</div>
+									
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+					</div>
+					<!--Start Modal Footer
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary">Save Changes</button>
+						<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+						</div>
+						End Modal Footer-->
+				</div>
+			</div>
+			</div>
+			<!--General Settings Modal End-->
+			
+			<!--Retargeting Code Modal Start-->
+			<div class="modal fade" id="retargetCode" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="largeModalLabel">Enter Retargeting Code</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						</div>
+						<div class="modal-body">
+						
+							<div class="row">
+								<div class="col">
+									<form class="" action="../../../editMeta"  method="post">
+									{% csrf_token %}
+										<input type="text" value="{{website.id}}" id="website_id" name="website_id" placeholder=""
+										class="form-control" hidden>
+
+										<div class="form-group mb-0 p-0">
+											<label>FB Retargeting Pixel</label>
+											<div class="input-group">
+												<textarea maxlength="5000" value="" rows="2" class="form-control text-3 h-auto " id="fb_retargetting_pixel" name="fb_retargetting_pixel" placeholder="FB Retargeting Pixel">{{meta.0.meta_in_head_content|slice:"8:"|slice:":-6"}}</textarea>
+												
+											</div>
+											<p class="text-right"> This script goes inside <b>head</b> tag</p>
+										</div>
+										<div class="form-group mb-0 p-0" style="border-top:none">
+											<div class="clearfix">
+												<label class="float-left">Perfect Audience Pixel</label>
+												
+											</div>
+											<div class="input-group">
+												<textarea maxlength="5000" value="" rows="2" class="form-control text-3 h-auto " id="perfect_audience_pixel" name="perfect_audience_pixel" placeholder="Perfect Audience Pixel">{{meta.0.meta_begin_body_content|slice:"8:"|slice:":-6"}}</textarea>
+												
+											</div>
+											<p class="text-right"> This script goes inside at the beginning of <b>body</b> tag.</p>
+										</div>
+										<div class="form-group mb-0 p-0" style="border-top:none">
+											<div class="clearfix">
+												<label class="float-left">Adroll Pixel/Google Analytics/Addthis.com Code Snippet</label>
+												
+											</div>
+											<div class="input-group">
+												<textarea maxlength="5000" value=""  rows="2" class="form-control text-3 h-auto" id="google_analytics" name="google_analytics" placeholder="Adroll Pixel/Google Analytics/Addthis.com Code Snippet">{{meta.0.meta_end_body_content|slice:"8:"|slice:":-6"}}</textarea>
+												
+											</div>
+											<p class="text-right"> This script goes inside at the end of <b>body</b> tag.</p>
+										</div>
+
+										{% if error != '' %}
+											<p class="text-danger">{{error}}</p>
+										{% endif %}
+										
+										<div class="row mt-1">
+											<div class="col-sm-8">
+												<div class="checkbox-custom checkbox-default">
+												
+												</div>
+											</div>
+											<div class="col-sm-4 text-right">
+												<button type="submit" name="retarget_code_submit" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;Save</button>
+											</div>
+										</div>
+								
+									</form>
+
+								</div>
+							</div>
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!--Retargeting Code Modal End-->
+			
+			<!--Edit Header Start-->
+			    <div class="modal fade" id="editHeader" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+					<div class="modal-dialog" style="max-width: 1300px;">
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="row">
+								<div class="col-md-12">
+									<h4 class="modal-title" id="defaultModalLabel">Component Content</h4>
+									<br>
+								</div>
+								</div>
+								<div class="row">
+								<div class="col-md-12">
+									<button type="button" class="btn btn-light" data-dismiss="modal" aria-hidden="true">X</button>
+								</div>
+								</div>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="tabs tabs-quaternary">
+											<ul class="nav nav-tabs ">
+												<li class="nav-item active">
+												<a class="nav-link active" href="#menu1" data-toggle="tab"><i class="fa fa-file mr-1" aria-hidden="true"></i>&nbsp;Add Main Menu</a>
+												</li>
+												<li class="nav-item">
+												<a class="nav-link" href="#menu2" data-toggle="tab"><i class="fa fa-file mr-1" aria-hidden="true"></i>&nbsp;Add Sub Menu</a>
+												</li>
+												<li class="nav-item">
+												<a class="nav-link" href="#website-detail" data-toggle="tab"><i class="fa fa-file-alt mr-1" aria-hidden="true"></i>&nbsp;Add General Details</a>
+												</li>
+											</ul>
+											<div class="tab-content">
+												<div id="menu1" class="tab-pane active pt-2 pb-2">
+													<div class="row">
+														<div class="col-lg-12 mb-3 p-3">
+															<div class="container">
+																<h4 class="mb-3">Enter Main Menu Details</h4>
+																<div class="card bg-color-grey">
+																<div class="card-body">
+																	<form enctype="multipart/form-data" class="contact-form" action="../../../editHeader" method="POST">
+																		{% csrf_token %}
+																		<div class="contact-form-error alert alert-danger d-none mt-4">
+																			<strong>Error!</strong> There was an error sending your message.
+																			<span class="mail-error-message text-1 d-block"></span>
+																		</div>
+																		<input type="hidden" name="website" value="{{website.id}}">
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Main Menu Title* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="menu1_title" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-lg-12">
+																				<label>Link Type</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu1_type" name="menu1_type" required="">
+																						<option value="">Choose...</option>
+																						<option value="external">External URL</option>
+																						<option value="page">Page</option>
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="form-row mb-3" id="menu1_link_url_div" style="display:none;">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Link URL* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" id="menu1_link_url" name="menu1_link_url">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3" id="menu1_page_link_div" style="display:none;">
+																			<div class="form-group col-lg-12">
+																				<label>Link Page</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu1_page_link" name="menu1_page_link">
+																						<option value="">Choose...</option>
+																						{% for page in all_pages %}
+																							<option value="{{page.page_url}}">{{page.page_title}}</option>
+																						{% endfor %}
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="form-row mt-1">
+																			<div class="form-group mt-2">
+																			<input type="submit" value="Add Main Menu" name="add_menu1" class="btn btn-primary" data-loading-text="Loading...">
+																			</div>
+																		</div>
+																	</form>
+																</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="menu2" class="tab-pane pt-2 pb-2">
+													<div class="row">
+														<div class="col-lg-12 mb-3 p-3">
+															<div class="container">
+																<h4 class="mb-3">Enter Sub Menu Details</h4>
+																<div class="card bg-color-grey">
+																<div class="card-body">
+																	<form enctype="multipart/form-data" class="contact-form" action="../../../editHeader" method="POST">
+																		{% csrf_token %}
+																		<div class="contact-form-error alert alert-danger d-none mt-4">
+																			<strong>Error!</strong> There was an error sending your message.
+																			<span class="mail-error-message text-1 d-block"></span>
+																		</div>
+																		<input type="hidden" name="website" value="{{website.id}}">
+																		<div class="form-row mb-3">
+																			<div class="form-group col-lg-12">
+																				<label>Select Menu1</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." name="menu1_select" required="">
+																						{% for each in menu1 %}
+        
+																						<option value="{{each.id}}">{{each.menu1_title}}</option>
+								
+																						{% endfor %}
+																						
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Menu1 Title* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="menu2_title" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-lg-12">
+																				<label>Link Type</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." name="menu2_type"  id="menu2_type" required="">
+																						<option value="">Choose...</option>
+																						<option value="external">External</option>
+																						<option value="page">Page</option>
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="form-row mb-3" id="menu2_link_url_div" style="display:none;">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Link URL* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" id="menu2_link_url" name="menu2_link_url">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3" id="menu2_page_link_div" style="display:none;">
+																			<div class="form-group col-lg-12">
+																				<label>Link Page</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu2_page_link" name="menu2_page_link">
+																						<option value="">Choose...</option>
+																						{% for page in all_pages %}
+																							<option value="{{page.page_url}}">{{page.page_title}}</option>
+																						{% endfor %}
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		
+																		<div class="form-row mt-1">
+																			<div class="form-group mt-2">
+																			<input type="submit" value="Add Sub Menu" name="add_menu2" class="btn btn-primary" data-loading-text="Loading...">
+																			</div>
+																		</div>
+																	</form>
+																</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="website-detail" class="tab-pane  pt-2 pb-2">
+													<div class="row">
+														<div class="col-lg-12 mb-3 p-3">
+															<div class="container">
+																<h4 class="mb-3">Enter General Deatils</h4>
+																<div class="card bg-color-grey">
+																<div class="card-body">
+																	<form enctype="multipart/form-data" class="contact-form" action="../../../editHeader" method="POST">
+																		{% csrf_token %}
+																		<div class="contact-form-error alert alert-danger d-none mt-4">
+																			<strong>Error!</strong> There was an error sending your message.
+																			<span class="mail-error-message text-1 d-block"></span>
+																		</div>
+																		<input type="hidden" name="website" value="{{website.id}}">
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Contact* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_contact}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_contact" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Email* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_email}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_email" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Facebook Link* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_facebook}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_facebook" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Twitter Link* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_twitter}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_twitter" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Instagram Link* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_instagram}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_instagram" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mb-3">
+																			<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">Tagline* <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="{{header.header_tagline}}" placeholder="ex. test123" data-msg-required="Please enter username." maxlength="200" class="form-control form-control-sm text-3 h-auto py-2" name="header_tagline" required="">
+																			</div>
+																		</div>
+																		<div class="form-row mt-1">
+																			<div class="form-group mt-2">
+																			<input type="submit" value="Save Changes" name="add_header_details" class="btn btn-primary" data-loading-text="Loading...">
+																			</div>
+																		</div>
+																	</form>
+																</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5">
+										<div class="col-lg-12">
+										  <!-- Menu1 Edit-->
+                						<div class="modal fade" id="menu1Edit" tabindex="-1" role="dialog"aria-hidden="true">
+											<div class="modal-dialog ">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h4 class="modal-title" id="largeModalLabel">Edit User</h4>
+														<button type="button" class="menu1close close" aria-hidden="true">&times;</button>
+													</div>
+													<div class="modal-body">
+													
+														<div class="row">
+															<div class="col">
+																<form enctype="multipart/form-data" class="contact-form" action="../../../editHeader" method="POST">
+																	{% csrf_token %}
+
+																	<div class="contact-form-error alert alert-danger d-none mt-4">
+																		<strong>Error!</strong> There was an error sending your message.
+																		<span class="mail-error-message text-1 d-block"></span>
+																	</div>
+
+																	<input type="hidden" id="menu1_id" name="menu1_id" placeholder="" class="form-control">
+
+																	<div class="form-row mb-3">
+																		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">menu1_title* <i class="fa fa-question-circle-o "
+																					aria-hidden="true" data-toggle="tooltip" data-placement="right"
+																					title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123"
+																				data-msg-required="Please enter username." maxlength="200"
+																				class="form-control form-control-sm text-3 h-auto py-2"  id="menu1_title"
+																				name="menu1_title" required>
+																		</div>
+																	</div>
+																	<div class="form-row mb-3">
+																			<div class="form-group col-lg-12">
+																				<label>Link Type</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu1_link_type" name="menu1_link_type" required="">
+																						<option value="">Choose...</option>
+																						<option value="external">External URL</option>
+																						<option value="page">Page</option>
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																	<div class="form-row mb-3" id="menu1_link_url_div" style="display:none;">
+																		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">menu1_link_url* <i class="fa fa-question-circle-o "
+																					aria-hidden="true" data-toggle="tooltip" data-placement="right"
+																					title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123"
+																				data-msg-required="Please enter username." maxlength="200"
+																				class="form-control form-control-sm text-3 h-auto py-2"  id="menu1_link_url"
+																				name="menu1_link_url">
+																		</div>
+																	</div>
+																	<div class="form-row mb-3" id="menu1_page_link_div" style="display:none;">
+																			<div class="form-group col-lg-12">
+																				<label>Link Page</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu1_page_link" name="menu1_page_link">
+																						<option value="">Choose...</option>
+																						{% for page in all_pages %}
+																							<option value="{{page.page_url}}">{{page.page_title}}</option>
+																						{% endfor %}
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																	<div class="form-row mt-1">
+																		<div class="form-group mt-2">
+																			<input type="submit" value="Save Changes" name="edit_menu1"
+																				class="btn btn-primary" data-loading-text="Loading...">
+																		</div>
+																	</div>
+																</form>
+
+															</div>
+														</div>
+
+
+													</div>
+													
+												</div>
+											</div>
+										</div>
+													<!-- End Menu1 Edit-->
+            
+										<!-- Menu2 Edit-->
+                						<div class="modal fade" id="menu2Edit" tabindex="-1" role="dialog"aria-hidden="true">
+											<div class="modal-dialog ">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h4 class="modal-title" id="largeModalLabel">Edit User</h4>
+														<button type="button" class="menu2close close"  aria-hidden="true">&times;</button>
+													</div>
+													<div class="modal-body">
+													
+														<div class="row">
+															<div class="col">
+																<form enctype="multipart/form-data" class="contact-form" action="../../../editHeader" method="POST">
+																	{% csrf_token %}
+
+																	<div class="contact-form-error alert alert-danger d-none mt-4">
+																		<strong>Error!</strong> There was an error sending your message.
+																		<span class="mail-error-message text-1 d-block"></span>
+																	</div>
+
+																	<input type="hidden" id="menu2_id" name="menu2_id" placeholder="" class="form-control">
+
+																	<div class="form-row mb-3">
+																		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">menu2_title* <i class="fa fa-question-circle-o "
+																					aria-hidden="true" data-toggle="tooltip" data-placement="right"
+																					title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123"
+																				data-msg-required="Please enter username." maxlength="200"
+																				class="form-control form-control-sm text-3 h-auto py-2"  id="menu2_title"
+																				name="menu2_title" required>
+																		</div>
+																	</div>
+																	<div class="form-row mb-3">
+																			<div class="form-group col-lg-12">
+																				<label>Link Type</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu2_link_type" name="menu2_link_type" required="">
+																						<option value="">Choose...</option>
+																						<option value="external">External URL</option>
+																						<option value="page">Page</option>
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																	<div class="form-row mb-3" id="menu2_link_url_div" style="display:none;">
+																		<div class="form-group col-sm-12 col-md-12 col-lg-12">
+																			<label class="mb-2 text-2">menu2_link_url* <i class="fa fa-question-circle-o "
+																					aria-hidden="true" data-toggle="tooltip" data-placement="right"
+																					title="" data-original-title="Need help"></i></label>
+																			<input type="text" value="" placeholder="ex. test123"
+																				data-msg-required="Please enter username." maxlength="200"
+																				class="form-control form-control-sm text-3 h-auto py-2"  id="menu2_link_url"
+																				name="menu2_link_url">
+																		</div>
+																	</div>
+																	<div class="form-row mb-3" id="menu2_page_link_div" style="display:none;">
+																			<div class="form-group col-lg-12">
+																				<label>Link Page</label>
+																				<div class="custom-select-1">
+																					<select class="form-control h-auto" data-msg-required="Please select a user." id="menu2_page_link" name="menu2_page_link">
+																						<option value="">Choose...</option>
+																						{% for page in all_pages %}
+																							<option value="{{page.page_url}}">{{page.page_title}}</option>
+																						{% endfor %}
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+
+																	<div class="form-row mt-1">
+																		<div class="form-group mt-2">
+																			<input type="submit" value="Save Changes" name="edit_menu2"
+																				class="btn btn-primary" data-loading-text="Loading...">
+																		</div>
+																	</div>
+																</form>
+
+															</div>
+														</div>
+
+
+													</div>
+													
+												</div>
+											</div>
+										</div>
+													<!-- End Menu2 Edit-->
+											
+											<!--deleteMenu1-->
+											<div id="modalRemoveMenu1" class="modal-block modal-block-primary mfp-hide">
+												<section class="card">
+												<header class="card-header">
+												<h2 class="card-title">Are you sure?</h2>
+												</header>
+												<div class="card-body">
+												<div class="modal-wrapper">
+												<div class="modal-icon">
+												<i class="fas fa-question-circle"></i>
+												</div>
+												<div class="modal-text">
+												<h4>Primary</h4>
+												<p>Are you sure that you want to delete this image?</p>
+												</div>
+												</div>
+												</div>
+												<footer class="card-footer">
+												<div class="row">
+												<div class="col-md-12 text-right">
+												<form method="post" action="../../../editHeader">
+												{% csrf_token %}
+												<input type="hidden" name="menu1_id" id="menu1_id" value="">
+												<button type="submit" name="removeMenu1" class="btn btn-primary">Confirm</button>
+												<button class="btn btn-default modal-dismiss">Cancel</button>
+												</form>
+												</div>
+												</div>
+												</footer>
+												</section>
+												</div>
+											<!--End deleteMenu1-->
+
+											<!--deleteMenu2-->
+											<div id="modalRemoveMenu2" class="modal-block modal-block-primary mfp-hide">
+												<section class="card">
+												<header class="card-header">
+												<h2 class="card-title">Are you sure?</h2>
+												</header>
+												<div class="card-body">
+												<div class="modal-wrapper">
+												<div class="modal-icon">
+												<i class="fas fa-question-circle"></i>
+												</div>
+												<div class="modal-text">
+												<h4>Primary</h4>
+												<p>Are you sure that you want to delete this image?</p>
+												</div>
+												</div>
+												</div>
+												<footer class="card-footer">
+												<div class="row">
+												<div class="col-md-12 text-right">
+												<form method="post" action="../../../editHeader">
+												{% csrf_token %}
+												<input type="hidden" name="menu2_id" id="menu2_id" value="">
+												<button type="submit" name="removeMenu2" class="btn btn-primary">Confirm</button>
+												<button class="btn btn-default modal-dismiss">Cancel</button>
+												</form>
+												</div>
+												</div>
+												</footer>
+												</section>
+												</div>
+											<!--End deleteMenu2-->
+											<div id="collapseDVR3" class="panel-collapse collapse in d-block">
+												<div class="tree ">
+												<h3>Header Menu Tree Editor</h3>
+													<ul>
+													{% for menu1 in menu_data %}
+														<li class="parent_li"> <span title="Collapse this branch"><i class="fa fa-folder-open fa-minus-square" aria-hidden="true"></i> {{menu1.title}}</span><a data-id="{{menu1.id}}" data-title="{{menu1.title}}" data-type="{{menu1.link_type}}" data-url="{{menu1.link_url}}" class="menu1Edit" href="#"> <i class="icon-note icons text-primary"></i></a>&nbsp;&nbsp;&nbsp;<a data-id="{{menu1.id}}" class="modal-basic menu1Delete" href="#modalRemoveMenu1"><i class="fa fa-close text-danger" aria-hidden="true"></i></a>
+															<ul>
+															{% for menu2 in menu1.childs %}
+																	<li class="parent_li" style="">	<span title="Collapse this branch"> {{menu2.menu2_title}}</span><a data-id="{{menu2.id}}" data-title="{{menu2.menu2_title}}" data-type="{{menu2.menu2_link_type}}" data-url="{{menu2.menu2_link_url}}" class="menu2Edit" href="#"> <i class="icon-note icons text-primary"></i></a>&nbsp;&nbsp;&nbsp;<a data-id="{{menu2.id}}" class="modal-basic menu2Delete" href="#modalRemoveMenu2"><i class="fa fa-close text-danger" aria-hidden="true"></i></a></li>
+															{% endfor %}
+															</ul>
+														</li>
+												
+													{% endfor %}
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Start Modal Footer
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary">Save Changes</button>
+								<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+								</div>
+								End Modal Footer-->
+						</div>
+					</div>
+					</div>
+			<!--End Edit Header-->
+            <!--Edit Header Start-->
+			    <div class="modal fade" id="changeHeaderStyle" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+                   <div class="modal-dialog" style="max-width: 1300px;">
+                      <div class="modal-content">
+                         <div class="modal-header">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="modal-title" id="defaultModalLabel">Change Header Layout</h4>
+                                    <br>
+                                </div> 
+                            </div>
+                             <div class="row">
+                                 <div class="col-md-2">
+                                 
+                                 </div>
+                                <div class="col-md-5">
+                                     <button type="button" class="btn btn-light" data-dismiss="modal" aria-hidden="true">X</button>
+                                </div>  
+                             </div>
+                                
+                           </div>
+                         <div class="modal-body">
+                            <h4>Header Layouts</h4>
+							<div class="row">
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_big_icon_top">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_big_icon_top.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header big icon top <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_big_icons">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_big_icons.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header big icons <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_classic">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_classic.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header classic <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_color_background">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_color_background.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header color background <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_flat_border">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_flat_border.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header flat border <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_flat_top_bar_coloured">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_flat_top_bar_coloured.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header flat top bar coloured <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_flat_top_border">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_flat_top_border.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header flat top border <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_flat_topbar">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_flat_topbar.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header flat topbar <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_flat">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_flat.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header flat <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_nav_pill">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_nav_pill.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header nav pill <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_navbar_devisor">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_navbar_devisor.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header navbar devisor <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_navbar_icons">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_navbar_icons.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header navbar icons <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+							
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_overview">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_overview.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header overview <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_pill">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_pill.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header pill <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_sticky_reveal">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_sticky_reveal.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header sticky reveal <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_sticky_shrink">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_sticky_shrink.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header sticky shrink <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+								
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_sticky_static">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_sticky_static.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header sticky static <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+
+									<form class="my-3" method="post" action="../../../editHeader">
+										<div class="row m-2">
+											<div class="col-lg-9 text-center">
+													{% csrf_token %}
+													<input type="hidden" name="id" value="{{header.id}}">
+													<input type="hidden" name="header_style" value="header_transperant_light">
+													<img class="img-fluid mb-2" src="{% static 'porto/img/components/header/header_transperant_light.png' %}" alt="Project Image">							
+											</div>
+											<div class="col-lg-3">
+												<h3 class="mt-0">header transperant light <i class="fa fa-question-circle-o " aria-hidden="true" data-toggle="tooltip" data-placement="right" title="" data-original-title="Need help"></i><h3>
+												<button type="submit" name="change_header" class="btn btn-primary">Select Header</button>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+                         <!--Start Modal Footer
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                         </div>
+                          End Modal Footer-->
+                      </div>
+                   </div>
+                </div>
+            
+			<!--End Edit Header-->
+            
+			<!-- Add Element-->
+                <div class="modal fade" id="addElement" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+                   <div class="modal-dialog" style="max-width: 1300px;">
+                      <div class="modal-content">
+                         <div class="modal-header">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="modal-title" id="defaultModalLabel">Add Element</h4>
+                                    <br>
+                                </div> 
+                            </div>
+                             <div class="row">
+                                 <div class="col-md-2">
+                                 
+                                 </div>
+                                <div class="col-md-5">
+                                     <button type="button" class="btn btn-light" data-dismiss="modal" aria-hidden="true">X</button>
+                                </div>  
+                             </div>
+                                
+                           </div>
+                         <div class="modal-body">
+                            <div class="row">
+								<div class="col">
+									<div class="row">
+										<div class="col-lg-2">
+											<div class="tabs tabs-vertical tabs-left tabs-navigation">
+											<ul class="nav nav-tabs col-sm-3">
+												<li class="nav-item active">
+													<a class="nav-link" href="#tabsCounters" data-toggle="tab"><i class="fas fa-users"></i> Counters</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#tabsNavigation2" data-toggle="tab"><i class="fas fa-file"></i> HTML5 / CSS3 / JS</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#tabsNavigation3" data-toggle="tab"><i class="fab fa-google-plus-g"></i> 500+ Google Fonts</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#tabsNavigation4" data-toggle="tab"><i class="fas fa-adjust"></i> Colors</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#tabsNavigation5" data-toggle="tab"><i class="fas fa-film"></i> Sliders</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#tabsNavigation6" data-toggle="tab"><i class="fas fa-user"></i> Icons</a>
+												</li>
+											</ul>
+											</div>
+										</div>
+										<div class="col-lg-10">
+											<div class="tab-pane tab-pane-navigation active" id="tabsCounters">
+												<h4>Counter</h4>
+													<div class="row">
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_default">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_default.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_animation">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_animation.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_big">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_big.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_small">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_small.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_icon_default">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_icon_default.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_icon_default_parallax">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_icon_default_parallax.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_icon_mordern_parallax">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_icon_mordern_parallax.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center my-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter_icon_side">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid mb-2" src="{% static 'porto/img/components/counter/counter_icon_side.png' %}" alt="Project Image">
+																<button type="submit" name="add_counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														
+												<!--		<div class="col-lg-6 text-center mb-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid rounded mb-2" src="{% static 'porto/img/components/counter.png' %}" alt="Project Image">
+																<button type="submit" name="counter" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>
+														<div class="col-lg-6 text-center mb-3">
+															<form method="post" action="../../../add-element">
+																{% csrf_token %}
+																<input type="hidden" name="page" value="{{page.id}}">
+																<input type="hidden" name="element_type" value="counter">
+																<input type="hidden" name="element_file" value="counter1">
+																<input type="hidden" name="pos_after" id="pos_after">
+																<img class="img-fluid rounded mb-2" src="{% static 'porto/img/components/counter1.png' %}" alt="Project Image">
+																<button type="submit" name="counter1" class="btn btn-primary">Add Element</button>
+															</form>
+														</div>-->
+													</div>
+											</div>
+											<div class="tab-pane tab-pane-navigation" id="tabsNavigation2">
+												<h4>HTML5 / CSS3 / JS</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+											</div>
+											<div class="tab-pane tab-pane-navigation" id="tabsNavigation3">
+												<h4>500+ Google Fonts</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
+												<img class="float-left" width="200" src="img/device.png" alt="">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+											</div>
+											<div class="tab-pane tab-pane-navigation" id="tabsNavigation4">
+												<h4>Colors</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+											</div>
+											<div class="tab-pane tab-pane-navigation" id="tabsNavigation5">
+												<h4>Sliders</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+											</div>
+											<div class="tab-pane tab-pane-navigation" id="tabsNavigation6">
+												<h4>Icons</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+						</div>
+                         <!--Start Modal Footer
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                         </div>
+                          End Modal Footer-->
+                      </div>
+                   </div>
+                </div>
+            <!-- End Add Element-->
+            
+
+            <div style="text-align: -webkit-center;">
+                <div id="websiteEdit" class="border border-dark">
+					<img alt="" class="img-fluid border-all owl-lazy" src="{% static 'porto/img/previews/headers/classic.jpg' %}" data-src="{% static 'porto/img/previews/headers/classic.jpg' %}" style="opacity: 1;">
+					<br><br>
+					<button type="button" class="btn btn-outline btn-primary btn-sm m-2" data-toggle="modal" data-target="#editHeader">+ Edit Header</button>
+					<button type="button" class="btn btn-outline btn-primary btn-sm m-2" data-toggle="modal" data-target="#changeHeaderStyle">+ Change Header Layout</button>
+					<hr>
+					<button type="button" class="addElement btn btn-outline btn-primary btn-sm m-2 d-block"  data-id="0">+ Add Element</button>
+					{% for items in page_data%}
+						{% with 'porto/pages/components/counter/'|add:items.file as  template%}
+							{% include template with data_order=items.order%}
+							<button type="button" class="addElement btn btn-outline btn-primary btn-sm m-2" data-id="{{items.order}}">+ Add Element</button>
+						{% endwith %}
+					{% endfor %}
+					{% comment %} {% with 'porto/pages/components/'|add:page.file as  template%}
+                        {% include template with data_order=page.order%} 
+                    {% endwith %} {% endcomment %}
+               	 <!--	<iframe class="embed-responsive-item" src="about-me.html" height="800" width="1140" title="Iframe Example"></iframe>
+            	--></div>
+            </div>
+            
+		</div>
+		</div>
+			
+			</section>
+		</div>
+		<aside id="sidebar-right" class="sidebar-right">
+			<div class="nano">
+				<div class="nano-content">
+					<a href="#" class="mobile-close d-md-none">
+						Collapse <i class="fas fa-chevron-right"></i>
+					</a>
+					<div class="sidebar-right-wrapper">
+						<div class="sidebar-widget widget-calendar">
+							<h6>Upcoming Tasks</h6>
+							<div data-plugin-datepicker data-plugin-skin="dark"></div>
+							<ul>
+								<li>
+									<time datetime="2017-04-19T00:00+00:00">04/19/2017</time>
+									<span>Company Meeting</span>
+								</li>
+							</ul>
+						</div>
+						<div class="sidebar-widget widget-friends">
+							<h6>Friends</h6>
+							<ul>
+								<li class="status-online">
+									<figure class="profile-picture">
+										<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Doe" class="rounded-circle">
+									</figure>
+									<div class="profile-info">
+										<span class="name">Joseph Doe Junior</span>
+										<span class="title">Hey, how are you?</span>
+									</div>
+								</li>
+								<li class="status-online">
+									<figure class="profile-picture">
+										<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Doe" class="rounded-circle">
+									</figure>
+									<div class="profile-info">
+										<span class="name">Joseph Doe Junior</span>
+										<span class="title">Hey, how are you?</span>
+									</div>
+								</li>
+								<li class="status-offline">
+									<figure class="profile-picture">
+										<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Doe" class="rounded-circle">
+									</figure>
+									<div class="profile-info">
+										<span class="name">Joseph Doe Junior</span>
+										<span class="title">Hey, how are you?</span>
+									</div>
+								</li>
+								<li class="status-offline">
+									<figure class="profile-picture">
+										<img src="{% static 'porto/img/%21sample-user.jpg'%}" alt="Joseph Doe" class="rounded-circle">
+									</figure>
+									<div class="profile-info">
+										<span class="name">Joseph Doe Junior</span>
+										<span class="title">Hey, how are you?</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</section>
+
+    
+	<script src="{% static 'porto_admin/vendor/jquery/jquery.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-cookie/jquery.cookie.js'%}"></script>
+	<script src="{% static 'porto_admin/master/style-switcher/style.switcher.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/popper/umd/popper.min.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/bootstrap/js/bootstrap.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/common/common.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/nanoscroller/nanoscroller.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/magnific-popup/jquery.magnific-popup.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-placeholder/jquery.placeholder.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-ui/jquery-ui.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqueryui-touch-punch/jquery.ui.touch-punch.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-appear/jquery.appear.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery.easy-pie-chart/jquery.easypiechart.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/flot/jquery.flot.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/flot.tooltip/jquery.flot.tooltip.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/flot/jquery.flot.pie.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/flot/jquery.flot.categories.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/flot/jquery.flot.resize.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jquery-sparkline/jquery.sparkline.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/raphael/raphael.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/morris/morris.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/gauge/gauge.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/snap.svg/snap.svg.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/liquid-meter/liquid.meter.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/jquery.vmap.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/data/jquery.vmap.sampledata.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/jquery.vmap.world.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.africa.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.asia.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.australia.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.europe.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js'%}"></script>
+	<script src="{% static 'porto_admin/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js'%}"></script>
+    
+	<script src="{% static 'porto_admin/js/examples/examples.modals.js'%}"></script>
+    
+	<script src="{% static 'porto_admin/js/theme.js'%}"></script>
+
+	<script src="{% static 'porto_admin/js/custom.js'%}"></script>
+
+	<script src="{% static 'porto_admin/js/theme.init.js'%}"></script>
+    <script src="https://kit.fontawesome.com/af24fccd36.js" crossorigin="anonymous"></script>
+	<script>		  (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-42715764-8', 'auto'); ga('send', 'pageview');		</script>
+
+	<script src="{% static 'porto_admin/js/examples/examples.dashboard.js'%}"></script>
+    <script>
+
+	    $("#mobileView").click(function(){
+           $("#websiteEdit").css({"width":"50%"}); 
+        });
+        $("#tabletView").click(function(){
+           $("#websiteEdit").css({"width":"80%"}); 
+        });
+        $("#desktopView").click(function(){
+           $("#websiteEdit").css({"width":"100%"}); 
+        });
+        
+        
+        $("#elementCounter").hover(function(){
+            $("#elementCounter").toggleClass("border border-secondary");
+        });
+        
+       $(document).on("click", ".addElement", function () {
+			var pos_after = $(this).data('id');
+			$("#addElement #pos_after").val( pos_after );
+			// As pointed out in comments, 
+			// it is unnecessary to have to manually call the modal.
+			$('#addElement').modal('show');
+		});
+
+		//edit menu1 popup
+		$(document).on("click", ".menu1Edit", function () {
+			var menu1_id = $(this).data('id');
+			var menu1_title = $(this).data('title');
+			var menu1_link_type = $(this).data('type');
+			var menu1_link_url = $(this).data('url');
+			$("#menu1Edit #menu1_id").val( menu1_id );
+			$("#menu1Edit #menu1_title").val( menu1_title );
+			$("#menu1Edit #menu1_link_type").val( menu1_link_type );
+			$("#menu1Edit #menu1_link_url").val( menu1_link_url );
+			$("#menu1Edit #menu1_page_link").val( menu1_link_url );
+
+			if($("#menu1Edit #menu1_link_type").val() == 'external'){
+				$("#menu1Edit #menu1_link_url_div").css("display","block");
+				$("#menu1Edit #menu1_page_link_div").css("display","none");
+			}
+			else{
+				$("#menu1Edit #menu1_link_url_div").css("display","none");
+				$("#menu1Edit #menu1_page_link_div").css("display","block");
+			}
+			// As pointed out in comments, 
+			// it is unnecessary to have to manually call the modal.
+			$('#menu1Edit').modal('show');
+		});
+
+		$( "#menu1Edit #menu1_link_type" ).change(function() {
+				var selected = $('#menu1Edit #menu1_link_type').val();
+					
+				if(selected == 'external'){
+					$("#menu1Edit #menu1_link_url_div").css("display","block");
+					$("#menu1Edit #menu1_page_link_div").css("display","none");
+				}
+				else{
+					$("#menu1Edit #menu1_link_url_div").css("display","none");
+					$("#menu1Edit #menu1_page_link_div").css("display","block");
+				}
+			});
+			
+		//edit menu2 popup
+		$(document).on("click", ".menu2Edit", function () {
+			var menu2_id = $(this).data('id');
+			var menu2_title = $(this).data('title');
+			var menu2_link_type = $(this).data('type');
+			var menu2_link_url = $(this).data('url');
+			$("#menu2Edit #menu2_id").val( menu2_id );
+			$("#menu2Edit #menu2_title").val( menu2_title );
+			$("#menu2Edit #menu2_link_type").val( menu2_link_type );
+			$("#menu2Edit #menu2_link_url").val( menu2_link_url );
+			$("#menu2Edit #menu2_page_link").val( menu2_link_url );
+
+			if($("#menu2Edit #menu2_link_type").val() == 'external'){
+				$("#menu2Edit #menu2_link_url_div").css("display","block");
+				$("#menu2Edit #menu2_page_link_div").css("display","none");
+			}
+			else{
+				$("#menu2Edit #menu2_link_url_div").css("display","none");
+				$("#menu2Edit #menu2_page_link_div").css("display","block");
+			}
+			// As pointed out in comments, 
+			// it is unnecessary to have to manually call the modal.
+			$('#menu2Edit').modal('show');
+		});
+
+		$( "#menu2Edit #menu2_link_type" ).change(function() {
+				var selected = $('#menu2Edit #menu2_link_type').val();
+					
+				if(selected == 'external'){
+					$("#menu2Edit #menu2_link_url_div").css("display","block");
+					$("#menu2Edit #menu2_page_link_div").css("display","none");
+				}
+				else{
+					$("#menu2Edit #menu2_link_url_div").css("display","none");
+					$("#menu2Edit #menu2_page_link_div").css("display","block");
+				}
+			});
+			
+
+
+		$(document).on("click", ".menu2Edit", function () {
+			var menu2_id = $(this).data('id');
+			var menu2_title = $(this).data('title');
+			var menu2_link_type = $(this).data('type');
+			var menu2_link_url = $(this).data('url');
+			$("#menu2Edit #menu2_id").val( menu2_id );
+			$("#menu2Edit #menu2_title").val( menu2_title );
+			$("#menu2Edit #menu2_link_type").val( menu2_link_type );
+			$("#menu2Edit #menu2_link_url").val( menu2_link_url );
+			// As pointed out in comments, 
+			// it is unnecessary to have to manually call the modal.
+			$('#menu2Edit').modal('show');
+		});
+
+		$(document).on("click", ".menu2Delete", function () {
+			var id = $(this).data('id');
+			$("#modalRemoveMenu2 #menu2_id").val( id );
+		});
+
+		$(document).on("click", ".menu1Delete", function () {
+			var id = $(this).data('id');
+			$("#modalRemoveMenu1 #menu1_id").val( id );
+		});
+		
+
+		//for tree
+		 $(function () {
+      $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+      $('.tree li.parent_li > span').on('click', function (e) {
+          var children = $(this).parent('li.parent_li').find(' > ul > li');
+          if (children.is(":visible")) {
+              children.hide('fast');
+              $(this).attr('title', 'Expand this branch').find(' > i').addClass('fa-plus-square').removeClass('fa-minus-square');
+          } else {
+              children.show('fast');
+              $(this).attr('title', 'Collapse this branch').find(' > i').addClass('fa-minus-square').removeClass('fa-plus-square');
+          }
+          e.stopPropagation();
+      });
+  });
+
+  $( "#menu1_type" ).change(function() {
+	  var selected = $('#menu1_type').val();
+	    
+	  if(selected == 'external'){
+		  $("#menu1_link_url_div").css("display","block");
+		  $("#menu1_page_link_div").css("display","none");
+	  }
+	  else{
+		  $("#menu1_link_url_div").css("display","none");
+		  $("#menu1_page_link_div").css("display","block");
+	  }
+});
+
+$( "#menu2_type" ).change(function() {
+	  var selected = $('#menu2_type').val();
+	    
+	  if(selected == 'external'){
+		  $("#menu2_link_url_div").css("display","block");
+		  $("#menu2_page_link_div").css("display","none");
+	  }
+	  else{
+		  $("#menu2_link_url_div").css("display","none");
+		  $("#menu2_page_link_div").css("display","block");
+	  }
+});
+
+$(".menu1close").click(function(){
+	$("#menu1Edit").modal('hide');
+});
+
+$(".menu2close").click(function(){
+	$("#menu2Edit").modal('hide');
+});
+</script>
+    
+<!-- Vendor -->
+		<script src="{% static 'porto/vendor/jquery/jquery.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.appear/jquery.appear.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.easing/jquery.easing.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.cookie/jquery.cookie.min.js'%}"></script>		
+		<script src="{% static 'porto/master/style-switcher/style.switcher.js'%}" id="styleSwitcherScript" data-base-path="" data-skin-src=""></script>		
+		<script src="{% static 'porto/vendor/popper/umd/popper.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/bootstrap/js/bootstrap.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/common/common.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.validation/jquery.validate.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.gmap/jquery.gmap.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/jquery.lazyload/jquery.lazyload.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/isotope/jquery.isotope.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/owl.carousel/owl.carousel.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/magnific-popup/jquery.magnific-popup.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/vide/jquery.vide.min.js'%}"></script>		
+		<script src="{% static 'porto/vendor/vivus/vivus.min.js'%}"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'porto/js/theme.js'%}"></script>
+
+		
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'porto/js/theme.init.js'%}"></script>    
+
+	<!-- script end -->
+</body>
+
+</html>

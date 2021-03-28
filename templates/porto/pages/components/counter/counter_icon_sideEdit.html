@@ -1,0 +1,739 @@
+{% if items.type == 'counter' and items.order == data_order%}
+{% for counter_data in  items.data%}
+
+ <div class="modal fade" id="counter_icon_side{{counter_data.id}}" tabindex="-1" role="dialog" aria-labelledby=""
+                aria-hidden="true">
+	<div class="modal-dialog" style="max-width: 1300px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="modal-title" id="">Component Content</h4>
+						<br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-light" data-dismiss="modal"
+							aria-hidden="true">X</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="tabs tabs-quaternary">
+							<ul class="nav nav-tabs">
+								<li class="nav-item">
+									<a class="nav-link active" href="#counterData{{counter_data.id}}" data-toggle="tab">Counter
+										Data</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#counterStyle{{counter_data.id}}" data-toggle="tab">Counter
+										Style</a>
+								</li>
+							</ul>
+						</div>
+						<form method="post" action="../../../edit">
+						{% csrf_token %}
+						<div class="tab-content">
+							<div id="counterStyle{{counter_data.id}}" class="tab-pane">
+								
+									<input type="hidden" value="counter" name="table">
+									<input type="hidden" value="{{counter_data.id}}" name="id">
+									<input type="hidden" value="0" name="counter_bg_image">
+                                               
+									<div class="row">
+										<div class="col-md-12 overflow-auto" style="height: 400px">
+											<h2 class="text-color-dark font-weight-bold text-5-5 mb-3">
+												Component Style</h2>
+											
+										   
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter Background Color </label>
+													<div class="input-group color colorpicker-element">
+														<span class="input-group-prepend">
+															<input name="background_color_picker" type="color" id="background_color_picker{{counter_data.id}}" class="input-group-text input-group-addon h-auto py-2 colorpicker-input-addon" maxlength="4"  value="{{counter_data.counter_bg_color}}">
+															
+														</span>
+														<input type="text" class="form-control" id="background_color_value{{counter_data.id}}" name="background_color_value" value="{{counter_data.counter_bg_color}}">
+														</div>
+														
+												</div>
+											</div>
+										   
+											
+											<br>
+
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter Title Color </label>
+													<div class="input-group color colorpicker-element">
+														<span class="input-group-prepend">
+															<input name="title_color_picker" type="color" id="title_color_picker{{counter_data.id}}" class="input-group-text input-group-addon h-auto py-2 colorpicker-input-addon" maxlength="4"  value="{{counter_data.counter_title_color}}" >
+															
+														</span>
+														<input type="text" class="form-control" id="title_color_value{{counter_data.id}}" name="title_color_value" value="{{counter_data.counter_title_color}}">
+														</div>
+														
+												</div>
+											</div>
+										   
+											
+											<br>
+
+
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter Icon Color </label>
+													<div class="input-group color colorpicker-element">
+														<span class="input-group-prepend">
+															<input name="counter_icon_color_picker" type="color" id="counter_icon_color_picker{{counter_data.id}}" class="input-group-text input-group-addon h-auto py-2 colorpicker-input-addon" maxlength="4" value="{{counter_data.counter_icon_color}}">
+															
+														</span>
+														<input type="text" class="form-control" id="counter_icon_color_value{{counter_data.id}}" name="counter_icon_color_value" value="{{counter_data.counter_icon_color}}">
+														</div>
+														
+												</div>
+											</div>
+
+										  
+										   <br>
+
+
+										   <div class="form-row">
+											   <div class="form-group col">
+												   <label class="mb-2 text-2">Counter Text Color </label>
+												   <div class="input-group color colorpicker-element">
+													   <span class="input-group-prepend">
+														   <input name="counter_text_color_picker" type="color" id="counter_text_color_picker{{counter_data.id}}" class="input-group-text input-group-addon h-auto py-2 colorpicker-input-addon" maxlength="4" value="{{counter_data.counter_text_color}}">
+														   
+													   </span>
+													   <input type="text" class="form-control" id="counter_text_color_value{{counter_data.id}}" name="counter_text_color_value" value="{{counter_data.counter_text_color}}">
+													   </div>
+													   
+											   </div>
+										   </div>
+
+										   <br>
+										   
+										</div>
+									</div>
+									
+							</div>
+							<div id="counterData{{counter_data.id}}" class="tab-pane active">
+								
+									<div class="row">
+										<div class="col-md-12 overflow-auto" style="height: 400px">
+											<h2 class="text-color-dark font-weight-bold text-5-5 mb-3">
+												Component Data</h2>
+											
+											<div class="form-row">
+												<div class="form-group col">
+													<input id="counter_title{{counter_data.id}}" placeholder="Enter Title"
+														type="text" class="form-control h-auto py-2"
+														 name="counter_title" value="{{counter_data.counter_title}}">
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<textarea  maxlength="5000" data-msg-required="Please enter your message."  rows="2" class="form-control h-auto py-2" id="counter_desc{{counter_data.id}}" name="counter_desc" placeholder="Enter description for counter" >{{counter_data.counter_desc}}</textarea>
+
+												   
+												</div>
+											</div>
+											<br>
+											<div class="form-row ">
+												<div class="form-group col">
+													<label>Counter Number</label>
+													<div class="custom-select-1">
+														<select class="form-control h-auto py-2"
+															data-msg-required="Select type." id="counter_number{{counter_data.id}}" name="counter_number">
+															<option value="">Select...</option>
+															<option value="3" {% if counter_data.counter_number == "3" %} selected {% endif %}>3</option>
+															<option value="4" {% if counter_data.counter_number == "4" %} selected {% endif %} >4</option>
+														   
+														</select>
+													</div>
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter 1 </label>
+													<input id="counter_icon1" placeholder="Counter Icon 1"
+														type="text" class="form-control h-auto py-2"
+														 name="counter_icon1" value="{{counter_data.counter_icon1}}">
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<input id="counter_text1{{counter_data.id}}" placeholder="Counter text 1"
+														type="text" class="form-control h-auto py-2"
+														 name="counter_text1" value="{{counter_data.counter_text1}}">
+												</div>
+											</div>
+											
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<div class="input-group">
+														<span class="input-group-prepend">
+															
+															<input id="counter_1_prepend" name="counter_1_prepend" type="text" class="form-control" maxlength="1" Placeholder="$" size="1" value="{{counter_data.counter_count1_prepend}}" >
+														</span>
+														<input id="counter_1_number{{counter_data.id}}" name="counter_1_number" type="text" class="form-control" placeholder="counter_1 number " value="{{counter_data.counter_count1}}">
+														<span class="input-group-append">
+															<input  id="counter_1_append" name="counter_1_append" type="text" class="form-control" maxlength="1" Placeholder="M" size="1" value="{{counter_data.counter_count1_append}}">
+														</span>
+													</div>
+												</div>
+											</div>
+
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter 2 </label>
+													<input id="counter_icon2" placeholder="Counter Icon 2"
+														type="text" class="form-control h-auto py-2"
+														 name="counter_icon2" value="{{counter_data.counter_icon2}}">
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<input id="counter_text2{{counter_data.id}}" placeholder="Counter text 2"
+														type="text" class="form-control h-auto py-2"
+														 name="counter_text2" value="{{counter_data.counter_text2}}">
+												</div>
+											</div>
+											
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<div class="input-group">
+														<span class="input-group-prepend">
+															
+															<input id="counter_2_prepend" name="counter_2_prepend" type="text" class="form-control" maxlength="1" Placeholder="$" size="1" value="{{counter_data.counter_count2_prepend}}">
+														</span>
+														<input  id="counter_2_number{{counter_data.id}}" name="counter_2_number" type="text" class="form-control" placeholder="counter_2 number " value="{{counter_data.counter_count2}}" >
+														<span class="input-group-append">
+															<input  id="counter_2_append" name="counter_2_append" type="text" class="form-control" maxlength="1" Placeholder="M" size="1" value="{{counter_data.counter_count2_append}}">
+														</span>
+													</div>
+												</div>
+											</div>
+
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter 3 </label>
+													<input id="counter_icon3" placeholder="Counter Icon 3"
+														type="text" class="form-control h-auto py-2"
+														name="counter_icon3" value="{{counter_data.counter_icon3}}">
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<input id="counter_text3{{counter_data.id}}" placeholder="Counter text 3"
+														type="text" class="form-control h-auto py-2"
+														name="counter_text3" value="{{counter_data.counter_text3}}">
+												</div>
+											</div>
+											
+
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<div class="input-group">
+														<span class="input-group-prepend">
+															
+															<input  id="counter_3_prepend"  name="counter_3_prepend" type="text" class="form-control" maxlength="1" Placeholder="$" size="1" value="{{counter_data.counter_count3_prepend}}">
+														</span>
+														<input  id="counter_3_number{{counter_data.id}}" name="counter_3_number" type="text" class="form-control" placeholder="counter_2 number " value="{{counter_data.counter_count3}}">
+														<span class="input-group-append">
+															<input  id="counter_3_append"  name="counter_3_append" type="text" class="form-control" maxlength="1" Placeholder="M" size="1" value="{{counter_data.counter_count3_append}}">
+														</span>
+													</div>
+												</div>
+											</div>
+
+
+											
+											<div id="section4_{{counter_data.id}}">
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<label class="mb-2 text-2">Counter 4 </label>
+													<input id="counter_icon4" placeholder="Counter Icon 4"
+														type="text" class="form-control h-auto py-2"
+														name="counter_icon4" value="{{counter_data.counter_icon4}}">
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<input id="counter_text4{{counter_data.id}}" placeholder="Counter text 4"
+														type="text" class="form-control h-auto py-2"
+														name="counter_text4" value="{{counter_data.counter_text4}}">
+												</div>
+											</div>
+											
+											<br>
+											<div class="form-row">
+												<div class="form-group col">
+													<div class="input-group">
+														<span class="input-group-prepend">
+															<input  id="counter_4_prepend" name="counter_4_prepend" type="text" class="form-control" maxlength="1" Placeholder="$" size="1" value="{{counter_data.counter_count4_prepend}}">
+														   
+														</span>
+														<input  id="counter_4_number{{counter_data.id}}"  name="counter_4_number" type="text" class="form-control" placeholder="counter_2 number " value="{{counter_data.counter_count4}}">
+														<span class="input-group-append">
+															<input  id="counter_4_append" name="counter_4_append" type="text" class="form-control" maxlength="1" Placeholder="M" size="1" value="{{counter_data.counter_count4_append}}">
+														</span>
+													</div>
+												</div>
+											</div>
+											</div>
+										  
+										   
+										</div>
+									</div>
+									
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary mt-2">Save</button>
+						</form>
+					</div>
+					<div class="col-md-9">
+						<div id="" class="border border-dark">
+
+							<!-- default -->
+							<section class="section section-default" style="background-color:{{counter_data.counter_bg_color}}!important; border-color:{{counter_data.counter_bg_color}}!important">
+							 
+								<div class="container">
+
+									<div class="row text-center">
+										<div class="col">
+											<h2 id="output_counter_title{{counter_data.id}}" class="word-rotator slide font-weight-bold text-8 mb-2" style="color: {{counter_data.counter_title_color}}!important;" >
+												{{counter_data.counter_title}}
+											</h2>
+											<h4 id="output_counter_desc{{counter_data.id}}" class="text-black lead tall text-4" style="color: {{counter_data.counter_title_color}}!important;"  >{{counter_data.counter_desc}}</h4>
+										</div>
+									</div>
+
+									{% if counter_data.counter_number == '4' %}
+
+									<div class="row text-dark counters mt-2 ">
+										<!-- with-borders -->
+										<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon1}}{% endautoescape %} 
+														</div>
+												
+												<strong id="output_counter_count1{{counter_data.id}}" class="ml-2 mt-3" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}"
+													data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_icon_color}}!important;" >{{counter_data.counter_count1}}</strong>
+												<!-- "style="color: #d85151!important;" -->
+												<label id="output_counter_text1{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text1}}</label>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon2}}{% endautoescape %} 
+														</div>
+
+											   <strong id="output_counter_count2{{counter_data.id}}"  class="ml-2 mt-3" data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}"
+													data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count2}}</strong>
+												<label id="output_counter_text2{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text2}}</label>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon3}}{% endautoescape %} 
+														</div>
+														<strong id="output_counter_count3{{counter_data.id}}" class="ml-2 mt-3" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}"
+													data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count3}}</strong>
+												<label id="output_counter_text3{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-3">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon4}}{% endautoescape %} 
+														</div>
+														<strong id="output_counter_count4{{counter_data.id}}" class="ml-2 mt-3" data-to="{{counter_data.counter_count4}}" data-prepend="{{counter_data.counter_count4_prepend}}"
+													data-append="{{counter_data.counter_count4_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count4}}</strong>
+												<label id="output_counter_text4{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text4}}</label>
+											</div>
+										</div>
+									</div>
+
+									{% else %}
+
+									<div class="row  counters mt-2 "> 
+										<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon1}}{% endautoescape %} 
+														</div>
+													<strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}" data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count1}}</strong> <!-- style="color: #d85151!important;" -->
+												<label id="output_3_counter_text1{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text1}}</label>
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon2}}{% endautoescape %} 
+														</div>
+												 <strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}" data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count2}}</strong>
+												<label id="output_3_counter_text2{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text2}}</label>
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-sm-0">
+											<div class="counter counter-side-icon">
+												<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+													{% autoescape off %}{{counter_data.counter_icon3}}{% endautoescape %} 
+														</div>
+												<strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}" data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count3}}</strong>
+												<label id="output_3_counter_text3{{counter_data.id}}" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+											</div>
+										</div>
+										
+									</div>
+
+									{% endif %}
+								</div>
+							</section>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		  
+		</div>
+	</div>
+</div>
+
+
+<section class="section section-default abc" style="background-color:{{counter_data.counter_bg_color}}!important; border-color:{{counter_data.counter_bg_color}}!important">
+ 
+	<div class="container">
+
+		<div class="row text-center">
+			<div class="col">
+				<h2 id="output_counter_title" class="word-rotator slide font-weight-bold text-8 mb-2" style="color: {{counter_data.counter_title_color}}!important;" >
+					{{counter_data.counter_title}}
+				</h2>
+				<h4 id="output_counter_desc" class="text-black lead tall text-4" style="color: {{counter_data.counter_title_color}}!important;"  >{{counter_data.counter_desc}}</h4>
+			</div>
+		</div>
+
+		{% if counter_data.counter_number == '4' %}
+
+		<div class="row text-dark counters mt-2 ">
+			<!-- with-borders -->
+			<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon1}}{% endautoescape %} 
+							</div>
+					
+					<strong id="output_counter_count1" class="ml-2 mt-3" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}"
+						data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_icon_color}}!important;" >{{counter_data.counter_count1}}</strong>
+					<!-- "style="color: #d85151!important;" -->
+					<label id="output_counter_text1" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text1}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon2}}{% endautoescape %} 
+							</div>
+
+				   <strong id="output_counter_count2"  class="ml-2 mt-3" data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}"
+						data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count2}}</strong>
+					<label id="output_counter_text2" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text2}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon3}}{% endautoescape %} 
+							</div>
+							<strong id="output_counter_count3" class="ml-2 mt-3" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}"
+						data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count3}}</strong>
+					<label id="output_counter_text3" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon4}}{% endautoescape %} 
+							</div>
+							<strong id="output_counter_count4" class="ml-2 mt-3" data-to="{{counter_data.counter_count4}}" data-prepend="{{counter_data.counter_count4_prepend}}"
+						data-append="{{counter_data.counter_count4_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count4}}</strong>
+					<label id="output_counter_text4" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text4}}</label>
+				</div>
+			</div>
+		</div>
+
+		{% else %}
+
+		<div class="row  counters mt-2 "> 
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon1}}{% endautoescape %} 
+							</div>
+						<strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}" data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count1}}</strong> <!-- style="color: #d85151!important;" -->
+					<label id="output_3_counter_text1" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text1}}</label>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon2}}{% endautoescape %} 
+							</div>
+					 <strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}" data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count2}}</strong>
+					<label id="output_3_counter_text2" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text2}}</label>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-sm-0">
+				<div class="counter counter-side-icon">
+					<div style="display: inline-block; color: {{counter_data.counter_icon_color}};">
+						{% autoescape off %}{{counter_data.counter_icon3}}{% endautoescape %} 
+							</div>
+					<strong id="" class="ml-2 mt-3" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}" data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_icon_color}}!important;">{{counter_data.counter_count3}}</strong>
+					<label id="output_3_counter_text3" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+				</div>
+			</div>
+			
+		</div>
+
+		{% endif %}
+	</div>
+	
+	<div class="overlay">
+		 <form class="d-inline" method="post" action="../../../updown-element">
+       {% csrf_token %}
+       <input type="hidden" name="id" value="{{items.id}}">
+       <input type="hidden" name="type" value="up">
+       <input type="hidden" name="page_id" value="{{page.id}}">
+        
+       <button type="submit" name="upCounter" class="btn btn-primary btn-sm mb-2"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		 </form>
+       <form class="d-inline" method="post" action="../../../updown-element">
+       {% csrf_token %}
+       <input type="hidden" name="id" value="{{items.id}}">
+       <input type="hidden" name="type" value="down">
+       <input type="hidden" name="page_id" value="{{page.id}}">
+      
+      <button type="submit" name="downCounter" class="btn btn-primary btn-sm mb-2"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+		 </form>
+       
+       <button type="button" id="btnClick" class="btn btn-primary btn-sm mb-2" data-toggle="modal" data-target="#counter_icon_side{{counter_data.id}}"><i class="fa fa-edit" aria-hidden="true"></i>  Edit Element</button>
+		 <a data-id="{{page}}" class="modal-basic removeCounter btn btn-danger btn-sm mb-2" href="#modalRemoveCounter{{counter_data.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Remove</a>
+   </div>
+ 
+ 
+</section>
+
+
+
+
+
+<div id="modalRemoveCounter{{counter_data.id}}" class="modal-block modal-block-primary mfp-hide">
+         <section class="card">
+         <header class="card-header">
+         <h2 class="card-title">Are you sure?</h2>
+         </header>
+         <div class="card-body">
+         <div class="modal-wrapper">
+         <div class="modal-icon">
+         <i class="fas fa-question-circle"></i>
+         </div>
+         <div class="modal-text">
+         <h4>Primary</h4>
+         <p>Are you sure that you want to delete this image?</p>
+         </div>
+         </div>
+         </div>
+         <footer class="card-footer">
+         <div class="row">
+         <div class="col-md-12 text-right">
+         <form method="post" action="../../../remove-element">
+         {% csrf_token %}
+         <input type="hidden" name="id" value="{{items.id}}">
+			<input type="hidden" name="page_id" value="{{page.id}}">
+			<button type="submit" name="removeCounter" class="btn btn-primary">Confirm</button>
+         <button class="btn btn-default modal-dismiss">Cancel</button>
+         </form>
+         </div>
+         </div>
+         </footer>
+         </section>
+         </div>
+		 
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+     var id = {{counter_data.id}};
+        
+    
+    var background_color,counter_icon_color, title_color, text_color;
+    var defaultColor = "";
+    
+
+    window.addEventListener("load", startup{{counter_data.id}}, false);
+
+
+    function startup{{counter_data.id}}() 
+    {
+        
+        background_color = document.querySelector("#background_color_picker{{counter_data.id}}");
+        counter_icon_color = document.querySelector("#counter_icon_color_picker{{counter_data.id}}");
+        title_color = document.querySelector("#title_color_picker{{counter_data.id}}");
+        text_color = document.querySelector("#counter_text_color_picker{{counter_data.id}}");
+   
+        background_color.addEventListener("input", updateFirst{{counter_data.id}}, false);
+        background_color.select();
+
+        counter_icon_color.addEventListener("input", updateFirst{{counter_data.id}}, false);
+        counter_icon_color.select();
+
+        title_color.addEventListener("input", updateFirst{{counter_data.id}}, false);
+        title_color.select();
+
+        text_color.addEventListener("input", updateFirst{{counter_data.id}}, false);
+        text_color.select();
+
+    }
+
+    function updateFirst{{counter_data.id}}(event) 
+    {
+        
+        var bg_color = document.querySelector("#background_color_picker{{counter_data.id}}");
+        var icon_color = document.querySelector("#counter_icon_color_picker{{counter_data.id}}");
+        var title_color = document.querySelector("#title_color_picker{{counter_data.id}}");
+        var text_color = document.querySelector("#counter_text_color_picker{{counter_data.id}}");
+
+        if (bg_color) 
+        {
+   
+            $("#background_color_value"+{{counter_data.id}}).val(bg_color.value);
+           
+        }
+
+        if (icon_color) 
+        {
+            $("#counter_icon_color_value"+{{counter_data.id}}).val(icon_color.value);
+           
+        }
+
+        if(title_color)
+        {
+            $("#title_color_value"+{{counter_data.id}}).val(title_color.value);
+        }
+
+        if(text_color)
+        {
+            $("#counter_text_color_value"+{{counter_data.id}}).val(text_color.value);
+        }
+    }
+    
+   
+    
+    
+    $( "#counter_title"+id ).keyup(function() {
+       
+        $('#output_counter_title{{counter_data.id}}').html($(this).val());
+    });
+
+    $( "#counter_desc"+id ).keyup(function() {
+        $('#output_counter_desc{{counter_data.id}}').html($(this).val());
+    });
+
+    $( "#counter_text1"+id ).keyup(function() {
+        $('#output_counter_text1{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_text1{{counter_data.id}}').html($(this).val());
+        
+    });
+
+      $( "#counter_1_number"+id ).keyup(function() {
+        $('#output_counter_count1{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_count1{{counter_data.id}}').html($(this).val());
+        
+    });
+
+    $( "#counter_2_number"+id ).keyup(function() {
+        $('#output_counter_count2{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_count2{{counter_data.id}}').html($(this).val());
+        
+    });
+
+    $( "#counter_3_number"+id ).keyup(function() {
+        $('#output_counter_count3{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_count3{{counter_data.id}}').html($(this).val());
+        
+    });
+
+    $( "#counter_4_number"+id ).keyup(function() {
+        $('#output_counter_count4{{counter_data.id}}').html($(this).val());
+        
+    });
+
+    $( "#counter_text2"+id ).keyup(function() {
+        $('#output_counter_text2{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_text2{{counter_data.id}}').html($(this).val());
+    });
+
+   
+    $( "#counter_text3"+id ).keyup(function() {
+        $('#output_counter_text3{{counter_data.id}}').html($(this).val());
+        $('#output_3_counter_text3{{counter_data.id}}').html($(this).val());
+    });
+
+   
+
+    $( "#counter_text4"+id ).keyup(function() {
+        $('#output_counter_text4{{counter_data.id}}').html($(this).val());
+    });
+
+ 
+    $(document).ready(function()
+    {
+        if($('#counter_number'+{{counter_data.id}}).val() == 3){
+            console.log('display none');
+            $("#section4_"+{{counter_data.id}}).css("display", "none");
+            
+        }
+
+        });
+
+    $('#counter_number'+id).change(function() 
+        {
+        if($(this).val() == 3){
+            console.log('display none');
+            $("#section4_"+{{counter_data.id}}).css("display", "none");
+            
+        }
+        if($(this).val() == 4){
+            console.log('display block');
+            $("#section4_"+{{counter_data.id}}).css("display", "block");
+        }
+
+
+    });
+
+
+</script>
+		
+{% endfor %}   
+{% endif %}

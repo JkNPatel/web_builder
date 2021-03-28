@@ -1,0 +1,45 @@
+{% if items.type == 'counter' and items.order == data_order%}
+            {% for each in  items.data%}
+<!-- Start Counter -->
+<section class="section section-default abc m-0 pt-0" id="elementCounter" style="border: 1px solid white">
+	<div class="container">
+		<div class="row text-center pt-4">
+			<div class="col">
+				<h2 class="word-rotator slide font-weight-bold text-8 mb-2">
+					<span id="counter_title">{{each.counter_title}}</span>
+				</h2>
+				<h4 id="counter_desc" class="text-primary lead tall text-4">{{each.counter_desc}}</h4>
+			</div>
+		</div>
+	  <div class="row counters counters-text-dark xyz">
+		 <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+			<div class="counter">
+			   <strong id="counter_count1" data-to="40000" data-append="+">{{each.counter_count1}}</strong>
+			   <label id="counter_text1">{{each.counter_text1}}</label>
+			</div>
+		 </div>
+		 <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+			<div class="counter">
+			   <strong  id="counter_count2"  data-to="15">{{each.counter_count2}}</strong>
+			   <label id="counter_text2">{{each.counter_text2}}</label>
+			</div>
+		 </div>
+		 <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+			<div class="counter">
+			   <strong  id="counter_count3" data-to="352">{{each.counter_count3}}</strong>
+			   <label id="counter_text3">{{each.counter_text3}}</label>
+			</div>
+		 </div>
+		 <div class="col-sm-6 col-lg-3">
+			<div class="counter">
+			   <strong  id="counter_count4" data-to="178">{{each.counter_count4}}</strong>
+			   <label id="counter_text4">{{each.counter_text4}}</label>
+			</div>
+		 </div>
+	  </div>
+	</div>
+</section>
+<!-- End Counter -->
+
+	{% endfor %}   
+{% endif %}

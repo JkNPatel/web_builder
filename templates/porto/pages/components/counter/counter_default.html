@@ -1,0 +1,83 @@
+{% if items.type == 'counter' and items.order == data_order%}
+            {% for counter_data in  items.data%}
+<!-- Start Counter -->
+<section class="section section-default mt-0 mb-0 " style="background-color:{{counter_data.counter_bg_color}}!important; border-color:{{counter_data.counter_bg_color}}!important">
+ 
+	<div class="container">
+
+		<div class="row text-center">
+			<div class="col">
+				<h2 id="output_counter_title" class="word-rotator slide font-weight-bold text-8 mb-2" style="color: {{counter_data.counter_title_color}}!important;" >
+					{{counter_data.counter_title}}
+				</h2>
+				<h4 id="output_counter_desc" class="text-black lead tall text-4" style="color: {{counter_data.counter_title_color}}!important;"  >{{counter_data.counter_desc}}</h4>
+			</div>
+		</div>
+
+		{% if counter_data.counter_number == '4' %}
+
+		<div class="row text-dark counters mt-2">
+			<!-- with-borders -->
+			<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+				<div class="counter">
+					<strong id="output_counter_count1" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}"
+						data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_count1}}</strong>
+					<!-- "style="color: #d85151!important;" -->
+					<label id="output_counter_text1" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text1}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+				<div class="counter">
+					<strong id="output_counter_count2"  data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}"
+						data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count2}}</strong>
+					<label id="output_counter_text2" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;" >{{counter_data.counter_text2}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+				<div class="counter">
+					<strong id="output_counter_count3" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}"
+						data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count3}}</strong>
+					<label id="output_counter_text3" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div class="counter">
+					<strong id="output_counter_count4" data-to="{{counter_data.counter_count4}}" data-prepend="{{counter_data.counter_count4_prepend}}"
+						data-append="{{counter_data.counter_count4_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count4}}</strong>
+					<label id="output_counter_text4" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text4}}</label>
+				</div>
+			</div>
+		</div>
+
+		{% else %}
+
+		<div class="row  text-white counters mt-2"> 
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+				<div class="counter">
+					<strong id="" data-to="{{counter_data.counter_count1}}" data-prepend="{{counter_data.counter_count1_prepend}}" data-append="{{counter_data.counter_count1_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count1}}</strong> <!-- style="color: #d85151!important;" -->
+					<label id="output_3_counter_text1" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text1}}</label>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-lg-0">
+				<div class="counter">
+					<strong id="" data-to="{{counter_data.counter_count2}}" data-prepend="{{counter_data.counter_count2_prepend}}" data-append="{{counter_data.counter_count2_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count2}}</strong>
+					<label id="output_3_counter_text2" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text2}}</label>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4 mb-4 mb-sm-0">
+				<div class="counter">
+					<strong id="" data-to="{{counter_data.counter_count3}}" data-prepend="{{counter_data.counter_count3_prepend}}" data-append="{{counter_data.counter_count3_append}}" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_count3}}</strong>
+					<label id="output_3_counter_text3" class="mt-2" style="color: {{counter_data.counter_text_color}}!important;">{{counter_data.counter_text3}}</label>
+				</div>
+			</div>
+			
+		</div>
+
+		{% endif %}
+	</div>
+</section>
+<!-- End Counter -->
+
+	{% endfor %}   
+{% endif %}
+

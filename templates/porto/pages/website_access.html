@@ -1,0 +1,295 @@
+{% extends "porto/pages/dashboard_leftbar.html" %}
+
+{% load static %}
+{% block content %}
+
+<section role="main" class="content-body">
+    <header class="page-header">
+        <h2>Website Access</h2>
+        <div class="right-wrapper text-right">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-home-alt"></i>
+                    </a>
+                </li>
+                <li><span>Dashboard</span></li>
+                <li><span>Website Access</span></li>
+            </ol>
+            <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fas fa-chevron-left"></i></a>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs tabs-quaternary">
+                <ul class="nav nav-tabs ">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#website-detail" data-toggle="tab"><i class="fa fa-check-square-o mr-1" aria-hidden="true"></i>&nbsp;Grant access</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+                    <div id="website-detail" class="tab-pane active pt-2 pb-2">
+
+                        
+                        <div class="row">
+
+                            <div class="col-lg-6 mb-3 p-3">
+
+                                <div class="container">
+                                    <h6 class="mb-3">Grant website access</h6>
+
+                                    <div class="card bg-color-grey">
+                                        <div class="card-body">
+                                          
+
+                                            <form enctype="multipart/form-data" class="contact-form" action="" method="POST">
+                                                {% csrf_token %}
+        
+        
+                                                <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                    <strong>Error!</strong> There was an error sending your message.
+                                                    <span class="mail-error-message text-1 d-block"></span>
+                                                </div>
+                                                
+                                                <div class="form-row mb-3">
+                                                    <div class="form-group col-lg-12">
+                                                        <label>User List</label>
+                                                        <div class="custom-select-1">
+                                                            <select class="form-control h-auto"
+                                                                data-msg-required="Please select a user." name="add_sub_user"
+                                                                required>
+                                                                <option value="">Choose...</option>
+        
+                                                                {% for user in sub_users %}
+        
+                                                                <option value="{{user.id}}">{{user.sub_user_uname}}</option>
+        
+                                                                {% endfor %}
+        
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                              
+        
+                                                <div class="form-row mb-3">
+                                                    <div class="form-group col-lg-12">
+                                                        <label>Website List</label>
+                                                        <div class="custom-select-1">
+                                                            <select class="form-control h-auto"
+                                                                data-msg-required="Please select a website." name="add_website"
+                                                                required>
+                                                                <option value="">Choose...</option>
+        
+                                                                {% for website in websites %}
+        
+                                                                <option value="{{website.id}}">{{website.website_name}}</option>
+        
+                                                                {% endfor %}
+        
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row mt-1">
+                                                    <div class="form-group mt-2">
+                                                        <input type="submit" value="Grant Access" name="add_user_access"
+                                                            class="btn btn-primary" data-loading-text="Loading...">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="p-3">
+
+                                    <h6 class="mb-3">Sub-users</h6>
+                                    
+                                    <table class="table table-hover table-bordered ">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    #
+                                                </th>
+                                                <th>
+                                                    Website
+                                                </th>
+                                                <th>
+                                                    Username
+                                                </th>
+                                                
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            {% for website in websites %}
+                                           
+
+                                            <tr>
+                                                <td>
+                                                    {{forloop.counter}}
+                                                </td>
+
+                                                <td>
+                                                   
+                                                    {{website.website_name}}
+                                                        
+                                                </td>
+
+                                                <td>
+
+
+                                                    <ul class="list list-icons list-icons-md ">
+                                                       
+                                                    {% for user_access in sub_user_access %}
+
+                                                    {% if user_access.sub_access_website_id_id == website.id %}
+                                                    
+                                                    {% for user in sub_users %}
+
+                                                    {% if user_access.sub_access_user_id_id  == user.id %}
+                                                    
+                                                    <li style="line-height:1.5 !important;" ><i class="fas fa-caret-right"></i> {{user.sub_user_uname}} &nbsp;<a href="subuser-access?id={{user_access.id}}"><i class="fa fa-trash-o text-primary" aria-hidden="true"></i></a></li>
+                               
+                                                    {% endif %}
+
+                                                    {% endfor %}
+
+                                                    {% endif %}
+
+                                                    {% endfor %}
+                                                    
+                                                </ul>
+
+                                                </td>
+
+                                                
+                                               
+                                               
+                                            </tr>
+                                            {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="modal fade" id="edit_user" tabindex="-1" role="dialog"
+	aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="largeModalLabel">Edit User</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+			
+				<div class="row">
+					<div class="col">
+						<form enctype="multipart/form-data" class="contact-form" action="" method="POST">
+                            {% csrf_token %}
+
+
+                            <div class="contact-form-error alert alert-danger d-none mt-4">
+                                <strong>Error!</strong> There was an error sending your message.
+                                <span class="mail-error-message text-1 d-block"></span>
+                            </div>
+
+                            <input type="text" value="" id="sub_user_id" name="sub_user_id"
+														placeholder="" class="form-control" hidden>
+
+                            <div class="form-row mb-3">
+                                <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                                    <label class="mb-2 text-2">Username* <i class="fa fa-question-circle-o "
+                                            aria-hidden="true" data-toggle="tooltip" data-placement="right"
+                                            title="" data-original-title="Need help"></i></label>
+                                    <input type="text" value="" placeholder="ex. test123"
+                                        data-msg-required="Please enter username." maxlength="200"
+                                        class="form-control form-control-sm text-3 h-auto py-2"  id="edit_username"
+                                        name="edit_username" required>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <div class="form-group col-sm-12 col-md-12 col-lg-12">
+
+                                    <label class="mb-2 text-2"> Password* <i
+                                            class="fa fa-question-circle-o " aria-hidden="true"
+                                            data-toggle="tooltip" data-placement="right" title=""
+                                            data-original-title="Need help"></i></label>
+
+                                    <input type="password" value="" placeholder="ex. password"
+                                        data-msg-required="Please enter password." maxlength="200"
+                                        class="form-control form-control-sm text-3 h-auto py-2"  id="edit_password"
+                                        name="edit_password" required>
+
+
+                                </div>
+                            </div>
+
+
+                          
+
+                            <div class="form-row mt-1">
+                                <div class="form-group mt-2">
+                                    <input type="submit" value="Save Changes" name="save_changes"
+                                        class="btn btn-primary" data-loading-text="Loading...">
+                                </div>
+                            </div>
+                        </form>
+
+					</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<script>
+    function editUser(id,name) {
+
+        var user_id = id;
+        var username = name;
+
+        console.log(user_id);
+        console.log(username);
+
+        $("#edit_username").val(username);
+        $("#sub_user_id").val(id);
+
+        $("#edit_user").modal();
+    }
+
+    </script>
+{% endblock content %}
